@@ -1,2 +1,5 @@
 res://default_env.tres
+res://Drag'n'Drop.tscn
+res://Scripts/Drag'n'Drop.gd
+res://Scripts/gobal.gd
 res://MainScene.tscn
