@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://uavvjji3d0xd"]
 
-[ext_resource type="Texture2D" uid="uid://c7ar11yuh1qvw" path="res://icon.png" id="1_8p57e"]
-[ext_resource type="Script" path="res://Scripts/Drag'n'Drop.gd" id="2_gag47"]
+[ext_resource type="Texture2D" uid="uid://c7ar11yuh1qvw" path="res://icon.png" id="1_y52hk"]
+[ext_resource type="Script" path="res://Scripts/Drag'n'Drop.gd" id="2_eql7s"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
 position = Vector2(-445, -212)
-texture_normal = ExtResource("1_8p57e")
-script = ExtResource("2_gag47")
+texture_normal = ExtResource("1_y52hk")
+script = ExtResource("2_eql7s")
 
 [node name="WaitTime" type="Timer" parent="TouchScreenButton"]
 

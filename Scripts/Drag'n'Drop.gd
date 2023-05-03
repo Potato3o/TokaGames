@@ -10,8 +10,12 @@ func _process(delta):
 		pass
 
 func _input(event):
-	if event is InputEventScreenDrag and isDrag:
-		self.position = event.position
+	#if event is InputEventScreenDrag and isDrag:
+		#self.position = event.position
+		#print(str(self.position) + "p")
+		#print(str(event.position) + "e")
+	if event is InputEventScreenTouch:
+		print(event.position)
 #timer to check if dragging or clicking 
 func _on_wait_time_timeout():
 	isDrag = true

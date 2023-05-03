@@ -1,5 +1,7 @@
 res://default_env.tres
-res://Drag'n'Drop.tscn
-res://Scripts/Drag'n'Drop.gd
-res://Scripts/gobal.gd
+res://Scenes/LevelTempletes/Drag'n'Drop.tscn
+res://Scripts/FillDot.gd
 res://MainScene.tscn
+res://Scenes/LevelTempletes/Trace.tscn
+res://Scenes/Cards/TraceCards.tscn
+res://Scripts/TraceNumber.gd

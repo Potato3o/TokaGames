@@ -1,0 +1,97 @@
+[gd_scene load_steps=6 format=3 uid="uid://cw36mp3a51fwi"]
+
+[ext_resource type="Texture2D" uid="uid://d05tj0swu2ivl" path="res://Sprites/Blue0.png" id="1_hb6ol"]
+[ext_resource type="Texture2D" uid="uid://bnkyueqjr8y1n" path="res://Sprites/Yellow10.png" id="2_qe2x1"]
+[ext_resource type="Script" path="res://Scripts/TraceNumber.gd" id="2_u7axo"]
+[ext_resource type="Script" path="res://Scripts/FillDot.gd" id="4_gmd76"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hawek"]
+radius = 32.52
+
+[node name="Node2D" type="Node2D"]
+
+[node name="BlueCards" type="Node2D" parent="."]
+
+[node name="Blue0" type="Sprite2D" parent="BlueCards"]
+position = Vector2(-369, -10)
+texture = ExtResource("1_hb6ol")
+script = ExtResource("2_u7axo")
+
+[node name="YellowCards" type="Node2D" parent="."]
+
+[node name="Yellow10" type="Sprite2D" parent="YellowCards"]
+position = Vector2(799, 584)
+texture = ExtResource("2_qe2x1")
+
+[node name="Dot" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(121, -97)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+script = ExtResource("4_gmd76")
+
+[node name="Dot2" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(-121, -97)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+script = ExtResource("4_gmd76")
+
+[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(-121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+script = ExtResource("4_gmd76")
+
+[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+script = ExtResource("4_gmd76")
+
+[node name="Dot5" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(0, -217)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+script = ExtResource("4_gmd76")
+
+[node name="Dot6" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(121, 353)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+script = ExtResource("4_gmd76")
+
+[node name="Dot7" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(-121, 353)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+script = ExtResource("4_gmd76")
+
+[node name="Dot8" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(-121, 112)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+script = ExtResource("4_gmd76")
+
+[node name="Dot9" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(121, 112)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+script = ExtResource("4_gmd76")
+
+[node name="Dot10" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(0, 233)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+script = ExtResource("4_gmd76")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
