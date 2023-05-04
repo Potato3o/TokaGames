@@ -1,13 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6prijuu4vfps"]
+[gd_scene load_steps=4 format=3 uid="uid://b6prijuu4vfps"]
 
-[ext_resource type="Texture2D" uid="uid://c7ar11yuh1qvw" path="res://icon.png" id="1_p43yr"]
+[ext_resource type="Texture2D" uid="uid://c7ar11yuh1qvw" path="res://icon.png" id="1_omhiw"]
 [ext_resource type="Script" path="res://Scripts/DragButton.gd" id="2"]
+[ext_resource type="Script" path="res://games button.gd" id="2_yjjn8"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="main menu" type="Camera2D" parent="."]
 
-[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2(-182, -235)
-texture_normal = ExtResource("1_p43yr")
+[node name="games button" type="TouchScreenButton" parent="."]
+position = Vector2(-27, -127)
+texture_normal = ExtResource("1_omhiw")
+script = ExtResource("2_yjjn8")
+
+[node name="Levels button" type="TouchScreenButton" parent="."]
+position = Vector2(-28, -242)
+texture_normal = ExtResource("1_omhiw")
 script = ExtResource("2")
+
+[node name="games menu" type="Camera2D" parent="."]
+position = Vector2(0, 694)
+
+[node name="levels menu" type="Camera2D" parent="."]
+position = Vector2(1588, -6)
+
+[connection signal="pressed" from="games button" to="games button" method="_on_pressed"]
+[connection signal="pressed" from="Levels button" to="Levels button" method="_on_pressed"]
