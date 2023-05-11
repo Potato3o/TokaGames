@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d05tj0swu2ivl"
-path="res://.godot/imported/Blue0.png-fb0c690bc43820d27c1add9e08e1ad6b.ctex"
+uid="uid://be7tglf8e3c1w"
+path="res://.godot/imported/Blue5.png-2241b1560db75f43039a6fd0047a66fa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Blue0.png"
-dest_files=["res://.godot/imported/Blue0.png-fb0c690bc43820d27c1add9e08e1ad6b.ctex"]
+source_file="res://Sprites/BlueCards/Blue5.png"
+dest_files=["res://.godot/imported/Blue5.png-2241b1560db75f43039a6fd0047a66fa.ctex"]
 
 [params]
 

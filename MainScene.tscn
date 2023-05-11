@@ -1,13 +1,41 @@
-[gd_scene load_steps=3 format=3 uid="uid://b6prijuu4vfps"]
+[gd_scene load_steps=2 format=3 uid="uid://b6prijuu4vfps"]
 
-[ext_resource type="Texture2D" uid="uid://c7ar11yuh1qvw" path="res://icon.png" id="1_p43yr"]
-[ext_resource type="Script" path="res://Scripts/DragButton.gd" id="2"]
+[sub_resource type="GDScript" id="GDScript_37spp"]
+script/source = "extends Node2D
+
+var startpoint = Vector2.ZERO
+var stoppoint = Vector2.ZERO
+var count = 0
+
+var vectorArray = []
+
+func _draw():
+	for i in vectorArray:
+		draw_line(i[0],i[1],Color.YELLOW,10)
+
+func _input(event):
+	if event is InputEventScreenDrag:
+		stoppoint = event.position 
+		if count == 0:
+			startpoint = to_local(event.position)
+			stoppoint = to_local(Vector2(event.position.x+1.0,event.position.y))
+		queue_redraw()
+		var array = [startpoint,stoppoint]
+		vectorArray.append(array)
+		startpoint = event.position
+		count += 1
+	if event is InputEventScreenTouch:
+		if event.is_pressed():
+			pass # start touch which means start drag
+		else:
+			count = 0
+		
+
+
+
+"
 
 [node name="Node2D" type="Node2D"]
+script = SubResource("GDScript_37spp")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2(-182, -235)
-texture_normal = ExtResource("1_p43yr")
-script = ExtResource("2")

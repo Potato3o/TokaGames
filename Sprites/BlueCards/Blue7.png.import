@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnkyueqjr8y1n"
-path="res://.godot/imported/Yellow10.png-6048bc65c520481f61398c9911abe6cb.ctex"
+uid="uid://b7rnx2dxljsa8"
+path="res://.godot/imported/Blue7.png-995bfa66e25b0923f263517a931ebca7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Yellow10.png"
-dest_files=["res://.godot/imported/Yellow10.png-6048bc65c520481f61398c9911abe6cb.ctex"]
+source_file="res://Sprites/BlueCards/Blue7.png"
+dest_files=["res://.godot/imported/Blue7.png-995bfa66e25b0923f263517a931ebca7.ctex"]
 
 [params]
 

@@ -21,8 +21,7 @@ gobal="*res://Scripts/gobal.gd"
 
 [display]
 
-window/size/mode=2
-window/stretch/mode="viewport"
+window/size/mode=3
 window/handheld/orientation=1
 
 [gui]
