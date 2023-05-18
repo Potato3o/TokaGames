@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="MathGames"
-run/main_scene="res://MainScene.tscn"
+run/main_scene="res://Scenes/LevelTempletes/Trace.tscn"
 config/features=PackedStringArray("4.0")
 config/icon="res://icon.png"
 
@@ -21,7 +21,9 @@ gobal="*res://Scripts/gobal.gd"
 
 [display]
 
-window/size/mode=3
+window/size/viewport_width=1080
+window/size/viewport_height=1800
+window/stretch/mode="viewport"
 window/handheld/orientation=1
 
 [gui]
@@ -38,4 +40,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_environment="res://default_env.tres"

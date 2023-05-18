@@ -16,8 +16,14 @@ var countpoint = 0
 #redraws these vectors 
 var vectorArray = []
 
+var hoffset = -600
+var voffset = -600
+var vscale = 1
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	self.z_index = 0
 	#sets child count and states
 	max = self.get_child_count()
 	checkBox.resize(max)
@@ -45,25 +51,32 @@ func tracepressed():
 			count += 1
 			checkBox[i] = true
 	if count >= max:
-		print("trace ON")
-		pass
-		#next level
+		get_parent().get_parent().cardNumber += 1
+		get_parent().get_parent().newCard()
+		queue_free()
 
 func _draw():
 	for i in vectorArray:
-		draw_line(i[0],i[1],Color.YELLOW,10)
+		draw_line((i[0] + Vector2(hoffset,voffset)) * Vector2(vscale,vscale),(i[1] + Vector2(hoffset,voffset))*Vector2(vscale,vscale),Color.YELLOW,10)
+
+var differences = [] 
 
 func _input(event):
 	if event is InputEventScreenDrag:
 		stoppoint = to_local(event.position)
 		if countpoint == 0:
-			startpoint = to_local(event.position)
-			stoppoint = to_local(Vector2(event.position.x+1.0,event.position.y))
+			startpoint = event.position
+			stoppoint = event.position
 		queue_redraw()
 		var array = [startpoint,stoppoint]
+		print("Reported: " + str(array[0].y))
+		print("Actual  : " + str(get_viewport().get_mouse_position().y))
+		differences.append(array[1].y-get_viewport().get_mouse_position().y)
 		vectorArray.append(array)
-		startpoint = to_local(event.position)
+		startpoint = event.position
 		countpoint += 1
+		if countpoint >= 100:
+			print(differences)
 	if event is InputEventScreenTouch:
 		if event.is_pressed():
 			pass # start touch which means start drag

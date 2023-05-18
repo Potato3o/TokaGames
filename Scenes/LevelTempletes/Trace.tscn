@@ -1,13 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://bus3fsjsx0ecc"]
 
-[ext_resource type="Texture2D" uid="uid://bqbw4u8nngd2q" path="res://Sprites/YellowCards/Yellow1.png" id="1_wueep"]
+[ext_resource type="Script" path="res://Scripts/LevelManager.gd" id="1_8ehhq"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_8ehhq")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(12, 15)
-zoom = Vector2(1.93, 0.63)
-
-[node name="Yellow1" type="Sprite2D" parent="."]
-position = Vector2(14, 30)
-texture = ExtResource("1_wueep")

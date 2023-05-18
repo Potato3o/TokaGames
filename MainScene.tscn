@@ -9,16 +9,18 @@ var count = 0
 
 var vectorArray = []
 
+var hoffset = -520 
+var voffset = -900
 func _draw():
 	for i in vectorArray:
-		draw_line(i[0],i[1],Color.YELLOW,10)
+		draw_line(i[0]+ Vector2(hoffset,voffset),i[1]+Vector2(hoffset,voffset),Color.YELLOW,10)
 
 func _input(event):
 	if event is InputEventScreenDrag:
 		stoppoint = event.position 
 		if count == 0:
-			startpoint = to_local(event.position)
-			stoppoint = to_local(Vector2(event.position.x+1.0,event.position.y))
+			startpoint = event.position
+			stoppoint = event.position + Vector2(1,1)
 		queue_redraw()
 		var array = [startpoint,stoppoint]
 		vectorArray.append(array)

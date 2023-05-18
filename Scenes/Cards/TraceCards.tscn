@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://ch2u2xlq2wfau"]
+[gd_scene load_steps=28 format=3 uid="uid://ch2u2xlq2wfau"]
 
 [ext_resource type="Texture2D" uid="uid://d05tj0swu2ivl" path="res://Sprites/BlueCards/Blue0.png" id="1_0adol"]
 [ext_resource type="Script" path="res://Scripts/TraceTracker.gd" id="3_1kaoy"]
@@ -32,8 +32,6 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hawek"]
 radius = 32.52
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dghv2"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -1512,7 +1510,3 @@ passby_press = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.5, 0.5)
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(385.401, 216)
-texture = SubResource("CompressedTexture2D_dghv2")

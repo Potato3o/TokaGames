@@ -1,6 +1,4 @@
 res://default_env.tres
-res://Scenes/Cards/TraceCards.tscn
-res://Scripts/TraceTracker.gd
 res://Scenes/LevelTempletes/Trace.tscn
+res://Scenes/Cards/TraceCards.tscn
 res://MainScene.tscn
-res://Scripts/FillDot.gd
