@@ -1,43 +1,47 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6prijuu4vfps"]
+[gd_scene load_steps=8 format=3 uid="uid://b6prijuu4vfps"]
 
-[sub_resource type="GDScript" id="GDScript_37spp"]
-script/source = "extends Node2D
+[ext_resource type="Texture2D" uid="uid://ceeptcbh34lxw" path="res://caterpillarSprites.png" id="1_6k4o2"]
+[ext_resource type="Script" path="res://Scripts/DragButton.gd" id="2"]
+[ext_resource type="Script" path="res://games button.gd" id="2_yjjn8"]
 
-var startpoint = Vector2.ZERO
-var stoppoint = Vector2.ZERO
-var count = 0
+[sub_resource type="AtlasTexture" id="AtlasTexture_v167t"]
+atlas = ExtResource("1_6k4o2")
+region = Rect2(54.025, 37.2715, 221.296, 120.893)
 
-var vectorArray = []
+[sub_resource type="AtlasTexture" id="AtlasTexture_qx2ar"]
+atlas = ExtResource("1_6k4o2")
+region = Rect2(50.079, 213.776, 225.277, 123.671)
 
-var hoffset = -520 
-var voffset = -900
-func _draw():
-	for i in vectorArray:
-		draw_line(i[0]+ Vector2(hoffset,voffset),i[1]+Vector2(hoffset,voffset),Color.YELLOW,10)
+[sub_resource type="AtlasTexture" id="AtlasTexture_du1la"]
+atlas = SubResource("AtlasTexture_qx2ar")
 
-func _input(event):
-	if event is InputEventScreenDrag:
-		stoppoint = event.position 
-		if count == 0:
-			startpoint = event.position
-			stoppoint = event.position + Vector2(1,1)
-		queue_redraw()
-		var array = [startpoint,stoppoint]
-		vectorArray.append(array)
-		startpoint = event.position
-		count += 1
-	if event is InputEventScreenTouch:
-		if event.is_pressed():
-			pass # start touch which means start drag
-		else:
-			count = 0
-		
-
-
-
-"
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcg17"]
+atlas = ExtResource("1_6k4o2")
+region = Rect2(368.391, 344.942, 124.009, 148.811)
 
 [node name="Node2D" type="Node2D"]
-script = SubResource("GDScript_37spp")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="main menu" type="Camera2D" parent="."]
+
+[node name="Levels button" type="TouchScreenButton" parent="."]
+position = Vector2(-104, -65)
+texture_normal = SubResource("AtlasTexture_v167t")
+script = ExtResource("2")
+
+[node name="games button" type="TouchScreenButton" parent="."]
+position = Vector2(-109, 138)
+texture_normal = SubResource("AtlasTexture_du1la")
+script = ExtResource("2_yjjn8")
+
+[node name="games menu" type="Camera2D" parent="."]
+position = Vector2(0, 694)
+
+[node name="levels menu" type="Camera2D" parent="."]
+position = Vector2(1588, -6)
+
+[node name="Smiley" type="Sprite2D" parent="." groups=["caterpillar"]]
+position = Vector2(-334, -201)
+texture = SubResource("AtlasTexture_jcg17")
+
+[connection signal="pressed" from="Levels button" to="Levels button" method="_on_pressed"]
+[connection signal="pressed" from="games button" to="games button" method="_on_pressed"]
