@@ -1,10 +1,23 @@
-[gd_scene load_steps=6 format=3 uid="uid://b6prijuu4vfps"]
+[gd_scene load_steps=8 format=3 uid="uid://b6prijuu4vfps"]
 
-[ext_resource type="Texture2D" uid="uid://b1us23h2ejcwo" path="res://Screen Shot 2023-05-05 at 8.36.04 AM.png" id="1_n7yjl"]
+[ext_resource type="Texture2D" uid="uid://ceeptcbh34lxw" path="res://caterpillarSprites.png" id="1_6k4o2"]
 [ext_resource type="Script" path="res://Scripts/DragButton.gd" id="2"]
 [ext_resource type="Script" path="res://games button.gd" id="2_yjjn8"]
-[ext_resource type="Texture2D" uid="uid://dkdfcw43q4nwm" path="res://Screen Shot 2023-05-05 at 8.36.58 AM.png" id="3_3drfm"]
-[ext_resource type="Texture2D" uid="uid://bu1of224itg6p" path="res://caterpillar/smileyCircle.png" id="5_fantv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v167t"]
+atlas = ExtResource("1_6k4o2")
+region = Rect2(54.025, 37.2715, 221.296, 120.893)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qx2ar"]
+atlas = ExtResource("1_6k4o2")
+region = Rect2(50.079, 213.776, 225.277, 123.671)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_du1la"]
+atlas = SubResource("AtlasTexture_qx2ar")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcg17"]
+atlas = ExtResource("1_6k4o2")
+region = Rect2(368.391, 344.942, 124.009, 148.811)
 
 [node name="Node2D" type="Node2D"]
 
@@ -12,12 +25,12 @@
 
 [node name="Levels button" type="TouchScreenButton" parent="."]
 position = Vector2(-104, -65)
-texture_normal = ExtResource("1_n7yjl")
+texture_normal = SubResource("AtlasTexture_v167t")
 script = ExtResource("2")
 
 [node name="games button" type="TouchScreenButton" parent="."]
 position = Vector2(-109, 138)
-texture_normal = ExtResource("3_3drfm")
+texture_normal = SubResource("AtlasTexture_du1la")
 script = ExtResource("2_yjjn8")
 
 [node name="games menu" type="Camera2D" parent="."]
@@ -28,7 +41,7 @@ position = Vector2(1588, -6)
 
 [node name="Smiley" type="Sprite2D" parent="." groups=["caterpillar"]]
 position = Vector2(-334, -201)
-texture = ExtResource("5_fantv")
+texture = SubResource("AtlasTexture_jcg17")
 
 [connection signal="pressed" from="Levels button" to="Levels button" method="_on_pressed"]
 [connection signal="pressed" from="games button" to="games button" method="_on_pressed"]
