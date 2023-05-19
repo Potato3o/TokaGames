@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=3 uid="uid://cxc6h13se87nu"]
+
+[ext_resource type="Texture2D" uid="uid://ceeptcbh34lxw" path="res://caterpillarSprites.png" id="1_4jh4k"]
+[ext_resource type="Script" path="res://Scripts/DragButton.gd" id="2_y5tud"]
+[ext_resource type="Script" path="res://games button.gd" id="3_d1ulc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v167t"]
+atlas = ExtResource("1_4jh4k")
+region = Rect2(54.025, 37.2715, 221.296, 120.893)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qx2ar"]
+atlas = ExtResource("1_4jh4k")
+region = Rect2(50.079, 213.776, 225.277, 123.671)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_du1la"]
+atlas = SubResource("AtlasTexture_qx2ar")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcg17"]
+atlas = ExtResource("1_4jh4k")
+region = Rect2(368.391, 344.942, 124.009, 148.811)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="main menu" type="Camera2D" parent="."]
+
+[node name="Levels button" type="TouchScreenButton" parent="."]
+position = Vector2(-104, -65)
+texture_normal = SubResource("AtlasTexture_v167t")
+script = ExtResource("2_y5tud")
+
+[node name="games button" type="TouchScreenButton" parent="."]
+position = Vector2(-109, 138)
+texture_normal = SubResource("AtlasTexture_du1la")
+script = ExtResource("3_d1ulc")
+
+[node name="games menu" type="Camera2D" parent="."]
+position = Vector2(0, 694)
+
+[node name="levels menu" type="Camera2D" parent="."]
+position = Vector2(1588, -6)
+
+[node name="Smiley" type="Sprite2D" parent="." groups=["caterpillar"]]
+position = Vector2(-334, -201)
+texture = SubResource("AtlasTexture_jcg17")
+
+[connection signal="pressed" from="Levels button" to="Levels button" method="_on_pressed"]
+[connection signal="pressed" from="games button" to="games button" method="_on_pressed"]
