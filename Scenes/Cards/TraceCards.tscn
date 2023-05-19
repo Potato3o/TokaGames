@@ -34,6 +34,7 @@
 radius = 32.52
 
 [node name="Node2D" type="Node2D"]
+scale = Vector2(2.89517, 2.89517)
 
 [node name="BlueCards" type="Node2D" parent="."]
 
@@ -133,7 +134,7 @@ passby_press = true
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="BlueCards/Blue0/WrongAreas"]
 modulate = Color(1, 0.0470588, 1, 1)
 position = Vector2(2, 346)
-scale = Vector2(31.2245, 17.9522)
+scale = Vector2(31.2245, 17.2752)
 shape = SubResource("RectangleShape2D_6aag4")
 passby_press = true
 
@@ -997,32 +998,37 @@ texture = ExtResource("12_45r2n")
 script = ExtResource("3_1kaoy")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
-position = Vector2(-130, -32)
+position = Vector2(-132.797, -31.557)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
-position = Vector2(-105, -49)
+position = Vector2(-108.965, -46.7547)
+shape = SubResource("RectangleShape2D_kaljy")
+passby_press = true
+
+[node name="TouchScreenButton21" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
+position = Vector2(-86.5132, -54.3536)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
-position = Vector2(-88, -18)
+position = Vector2(-87.8945, 5.05574)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton4" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
-position = Vector2(-86, -55)
+position = Vector2(-88.2407, -20.5041)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
-position = Vector2(-89, 13)
+position = Vector2(-87.895, 34.415)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
-position = Vector2(-89, 44)
+position = Vector2(-88.9312, 63.7742)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
@@ -1108,7 +1114,7 @@ passby_press = true
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="BlueCards/Blue10/WrongAreas"]
 modulate = Color(1, 0.0470588, 1, 1)
 position = Vector2(2, 322)
-scale = Vector2(29.4144, 18.6538)
+scale = Vector2(29.4212, 16.8439)
 shape = SubResource("RectangleShape2D_6aag4")
 passby_press = true
 
@@ -1128,67 +1134,258 @@ passby_press = true
 
 [node name="YellowCards" type="Node2D" parent="."]
 
-[node name="Yellow10" type="Sprite2D" parent="YellowCards"]
-position = Vector2(6938, 1152)
-texture = ExtResource("13_5e8ko")
+[node name="Yellow1" type="Sprite2D" parent="YellowCards"]
+position = Vector2(489, 1152)
+texture = ExtResource("23_xysd5")
 script = ExtResource("4_gmd76")
 
-[node name="Dot" type="TouchScreenButton" parent="YellowCards/Yellow10"]
-position = Vector2(121, -97)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot2" type="TouchScreenButton" parent="YellowCards/Yellow10"]
-position = Vector2(-121, -97)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow1"]
 position = Vector2(-121, -338)
 scale = Vector2(1.02481, 1.02681)
 shape = SubResource("CircleShape2D_hawek")
 passby_press = true
 
-[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+[node name="Yellow2" type="Sprite2D" parent="YellowCards"]
+position = Vector2(1287, 1152)
+texture = ExtResource("22_vbva2")
+script = ExtResource("4_gmd76")
+
+[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow2"]
+position = Vector2(-121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow2"]
 position = Vector2(121, -338)
 scale = Vector2(1.02481, 1.02681)
 shape = SubResource("CircleShape2D_hawek")
 passby_press = true
 
-[node name="Dot5" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+[node name="Yellow3" type="Sprite2D" parent="YellowCards"]
+position = Vector2(1971, 1152)
+texture = ExtResource("21_tymjw")
+script = ExtResource("4_gmd76")
+
+[node name="Dot2" type="TouchScreenButton" parent="YellowCards/Yellow3"]
+position = Vector2(-121, -97)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow3"]
+position = Vector2(-121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow3"]
+position = Vector2(121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Yellow4" type="Sprite2D" parent="YellowCards"]
+position = Vector2(2659, 1152)
+texture = ExtResource("20_1vw0y")
+script = ExtResource("4_gmd76")
+
+[node name="Dot" type="TouchScreenButton" parent="YellowCards/Yellow4"]
+position = Vector2(121, -97)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot2" type="TouchScreenButton" parent="YellowCards/Yellow4"]
+position = Vector2(-121, -97)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow4"]
+position = Vector2(-121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow4"]
+position = Vector2(121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Yellow5" type="Sprite2D" parent="YellowCards"]
+position = Vector2(3359, 1152)
+texture = ExtResource("19_656hc")
+script = ExtResource("4_gmd76")
+
+[node name="Dot" type="TouchScreenButton" parent="YellowCards/Yellow5"]
+position = Vector2(121, -97)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot2" type="TouchScreenButton" parent="YellowCards/Yellow5"]
+position = Vector2(-121, -97)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow5"]
+position = Vector2(-121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow5"]
+position = Vector2(121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot5" type="TouchScreenButton" parent="YellowCards/Yellow5"]
 position = Vector2(0, -217)
 scale = Vector2(1.02481, 1.02681)
 shape = SubResource("CircleShape2D_hawek")
 passby_press = true
 
-[node name="Dot6" type="TouchScreenButton" parent="YellowCards/Yellow10"]
-position = Vector2(121, 353)
+[node name="Yellow6" type="Sprite2D" parent="YellowCards"]
+position = Vector2(4040, 1152)
+texture = ExtResource("18_wd1hi")
+script = ExtResource("4_gmd76")
+
+[node name="Dot" type="TouchScreenButton" parent="YellowCards/Yellow6"]
+position = Vector2(121, -97)
 scale = Vector2(1.02481, 1.02681)
 shape = SubResource("CircleShape2D_hawek")
 passby_press = true
 
-[node name="Dot7" type="TouchScreenButton" parent="YellowCards/Yellow10"]
-position = Vector2(-121, 353)
+[node name="Dot2" type="TouchScreenButton" parent="YellowCards/Yellow6"]
+position = Vector2(-121, -97)
 scale = Vector2(1.02481, 1.02681)
 shape = SubResource("CircleShape2D_hawek")
 passby_press = true
 
-[node name="Dot8" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow6"]
+position = Vector2(-121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow6"]
+position = Vector2(121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot5" type="TouchScreenButton" parent="YellowCards/Yellow6"]
+position = Vector2(0, -217)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot8" type="TouchScreenButton" parent="YellowCards/Yellow6"]
 position = Vector2(-121, 112)
 scale = Vector2(1.02481, 1.02681)
 shape = SubResource("CircleShape2D_hawek")
 passby_press = true
 
-[node name="Dot9" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+[node name="Yellow7" type="Sprite2D" parent="YellowCards"]
+position = Vector2(4753, 1152)
+texture = ExtResource("17_65vex")
+script = ExtResource("4_gmd76")
+
+[node name="Dot" type="TouchScreenButton" parent="YellowCards/Yellow7"]
+position = Vector2(121, -97)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot2" type="TouchScreenButton" parent="YellowCards/Yellow7"]
+position = Vector2(-121, -97)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow7"]
+position = Vector2(-121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow7"]
+position = Vector2(121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot5" type="TouchScreenButton" parent="YellowCards/Yellow7"]
+position = Vector2(0, -217)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot8" type="TouchScreenButton" parent="YellowCards/Yellow7"]
+position = Vector2(-121, 112)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot9" type="TouchScreenButton" parent="YellowCards/Yellow7"]
 position = Vector2(121, 112)
 scale = Vector2(1.02481, 1.02681)
 shape = SubResource("CircleShape2D_hawek")
 passby_press = true
 
-[node name="Dot10" type="TouchScreenButton" parent="YellowCards/Yellow10"]
-position = Vector2(0, 233)
+[node name="Yellow8" type="Sprite2D" parent="YellowCards"]
+position = Vector2(5492, 1152)
+texture = ExtResource("16_k43ha")
+script = ExtResource("4_gmd76")
+
+[node name="Dot" type="TouchScreenButton" parent="YellowCards/Yellow8"]
+position = Vector2(121, -97)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot2" type="TouchScreenButton" parent="YellowCards/Yellow8"]
+position = Vector2(-121, -97)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow8"]
+position = Vector2(-121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow8"]
+position = Vector2(121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot5" type="TouchScreenButton" parent="YellowCards/Yellow8"]
+position = Vector2(0, -217)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot7" type="TouchScreenButton" parent="YellowCards/Yellow8"]
+position = Vector2(-121, 353)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot8" type="TouchScreenButton" parent="YellowCards/Yellow8"]
+position = Vector2(-121, 112)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot9" type="TouchScreenButton" parent="YellowCards/Yellow8"]
+position = Vector2(121, 112)
 scale = Vector2(1.02481, 1.02681)
 shape = SubResource("CircleShape2D_hawek")
 passby_press = true
@@ -1252,258 +1449,67 @@ scale = Vector2(1.02481, 1.02681)
 shape = SubResource("CircleShape2D_hawek")
 passby_press = true
 
-[node name="Yellow8" type="Sprite2D" parent="YellowCards"]
-position = Vector2(5492, 1152)
-texture = ExtResource("16_k43ha")
+[node name="Yellow10" type="Sprite2D" parent="YellowCards"]
+position = Vector2(6938, 1152)
+texture = ExtResource("13_5e8ko")
 script = ExtResource("4_gmd76")
 
-[node name="Dot" type="TouchScreenButton" parent="YellowCards/Yellow8"]
+[node name="Dot" type="TouchScreenButton" parent="YellowCards/Yellow10"]
 position = Vector2(121, -97)
 scale = Vector2(1.02481, 1.02681)
 shape = SubResource("CircleShape2D_hawek")
 passby_press = true
 
-[node name="Dot2" type="TouchScreenButton" parent="YellowCards/Yellow8"]
+[node name="Dot2" type="TouchScreenButton" parent="YellowCards/Yellow10"]
 position = Vector2(-121, -97)
 scale = Vector2(1.02481, 1.02681)
 shape = SubResource("CircleShape2D_hawek")
 passby_press = true
 
-[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow8"]
+[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow10"]
 position = Vector2(-121, -338)
 scale = Vector2(1.02481, 1.02681)
 shape = SubResource("CircleShape2D_hawek")
 passby_press = true
 
-[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow8"]
+[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow10"]
 position = Vector2(121, -338)
 scale = Vector2(1.02481, 1.02681)
 shape = SubResource("CircleShape2D_hawek")
 passby_press = true
 
-[node name="Dot5" type="TouchScreenButton" parent="YellowCards/Yellow8"]
+[node name="Dot5" type="TouchScreenButton" parent="YellowCards/Yellow10"]
 position = Vector2(0, -217)
 scale = Vector2(1.02481, 1.02681)
 shape = SubResource("CircleShape2D_hawek")
 passby_press = true
 
-[node name="Dot7" type="TouchScreenButton" parent="YellowCards/Yellow8"]
+[node name="Dot6" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(121, 353)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_hawek")
+passby_press = true
+
+[node name="Dot7" type="TouchScreenButton" parent="YellowCards/Yellow10"]
 position = Vector2(-121, 353)
 scale = Vector2(1.02481, 1.02681)
 shape = SubResource("CircleShape2D_hawek")
 passby_press = true
 
-[node name="Dot8" type="TouchScreenButton" parent="YellowCards/Yellow8"]
+[node name="Dot8" type="TouchScreenButton" parent="YellowCards/Yellow10"]
 position = Vector2(-121, 112)
 scale = Vector2(1.02481, 1.02681)
 shape = SubResource("CircleShape2D_hawek")
 passby_press = true
 
-[node name="Dot9" type="TouchScreenButton" parent="YellowCards/Yellow8"]
+[node name="Dot9" type="TouchScreenButton" parent="YellowCards/Yellow10"]
 position = Vector2(121, 112)
 scale = Vector2(1.02481, 1.02681)
 shape = SubResource("CircleShape2D_hawek")
 passby_press = true
 
-[node name="Yellow7" type="Sprite2D" parent="YellowCards"]
-position = Vector2(4753, 1152)
-texture = ExtResource("17_65vex")
-script = ExtResource("4_gmd76")
-
-[node name="Dot" type="TouchScreenButton" parent="YellowCards/Yellow7"]
-position = Vector2(121, -97)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot2" type="TouchScreenButton" parent="YellowCards/Yellow7"]
-position = Vector2(-121, -97)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow7"]
-position = Vector2(-121, -338)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow7"]
-position = Vector2(121, -338)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot5" type="TouchScreenButton" parent="YellowCards/Yellow7"]
-position = Vector2(0, -217)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot8" type="TouchScreenButton" parent="YellowCards/Yellow7"]
-position = Vector2(-121, 112)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot9" type="TouchScreenButton" parent="YellowCards/Yellow7"]
-position = Vector2(121, 112)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Yellow6" type="Sprite2D" parent="YellowCards"]
-position = Vector2(4040, 1152)
-texture = ExtResource("18_wd1hi")
-script = ExtResource("4_gmd76")
-
-[node name="Dot" type="TouchScreenButton" parent="YellowCards/Yellow6"]
-position = Vector2(121, -97)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot2" type="TouchScreenButton" parent="YellowCards/Yellow6"]
-position = Vector2(-121, -97)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow6"]
-position = Vector2(-121, -338)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow6"]
-position = Vector2(121, -338)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot5" type="TouchScreenButton" parent="YellowCards/Yellow6"]
-position = Vector2(0, -217)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot8" type="TouchScreenButton" parent="YellowCards/Yellow6"]
-position = Vector2(-121, 112)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Yellow5" type="Sprite2D" parent="YellowCards"]
-position = Vector2(3359, 1152)
-texture = ExtResource("19_656hc")
-script = ExtResource("4_gmd76")
-
-[node name="Dot" type="TouchScreenButton" parent="YellowCards/Yellow5"]
-position = Vector2(121, -97)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot2" type="TouchScreenButton" parent="YellowCards/Yellow5"]
-position = Vector2(-121, -97)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow5"]
-position = Vector2(-121, -338)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow5"]
-position = Vector2(121, -338)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot5" type="TouchScreenButton" parent="YellowCards/Yellow5"]
-position = Vector2(0, -217)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Yellow4" type="Sprite2D" parent="YellowCards"]
-position = Vector2(2659, 1152)
-texture = ExtResource("20_1vw0y")
-script = ExtResource("4_gmd76")
-
-[node name="Dot" type="TouchScreenButton" parent="YellowCards/Yellow4"]
-position = Vector2(121, -97)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot2" type="TouchScreenButton" parent="YellowCards/Yellow4"]
-position = Vector2(-121, -97)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow4"]
-position = Vector2(-121, -338)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow4"]
-position = Vector2(121, -338)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Yellow3" type="Sprite2D" parent="YellowCards"]
-position = Vector2(1971, 1152)
-texture = ExtResource("21_tymjw")
-script = ExtResource("4_gmd76")
-
-[node name="Dot2" type="TouchScreenButton" parent="YellowCards/Yellow3"]
-position = Vector2(-121, -97)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow3"]
-position = Vector2(-121, -338)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow3"]
-position = Vector2(121, -338)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Yellow2" type="Sprite2D" parent="YellowCards"]
-position = Vector2(1287, 1152)
-texture = ExtResource("22_vbva2")
-script = ExtResource("4_gmd76")
-
-[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow2"]
-position = Vector2(-121, -338)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow2"]
-position = Vector2(121, -338)
-scale = Vector2(1.02481, 1.02681)
-shape = SubResource("CircleShape2D_hawek")
-passby_press = true
-
-[node name="Yellow1" type="Sprite2D" parent="YellowCards"]
-position = Vector2(489, 1152)
-texture = ExtResource("23_xysd5")
-script = ExtResource("4_gmd76")
-
-[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow1"]
-position = Vector2(-121, -338)
+[node name="Dot10" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(0, 233)
 scale = Vector2(1.02481, 1.02681)
 shape = SubResource("CircleShape2D_hawek")
 passby_press = true

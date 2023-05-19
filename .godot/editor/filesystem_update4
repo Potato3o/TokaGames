@@ -2,3 +2,5 @@ res://default_env.tres
 res://Scenes/LevelTempletes/Trace.tscn
 res://Scenes/Cards/TraceCards.tscn
 res://MainScene.tscn
+res://Scripts/FillDot.gd
+res://Scripts/LevelManager.gd
