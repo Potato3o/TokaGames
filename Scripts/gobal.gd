@@ -1,4 +1,5 @@
 extends Node
 
 
-var selected = ""
+var touched = false
+var selected 
