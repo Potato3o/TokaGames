@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6prijuu4vfps"]
+[gd_scene load_steps=8 format=3 uid="uid://dw0wrkgj7bx3p"]
 
 [ext_resource type="Texture2D" uid="uid://ceeptcbh34lxw" path="res://caterpillarSprites.png" id="1_6k4o2"]
 [ext_resource type="Script" path="res://Scripts/DragButton.gd" id="2"]
@@ -8,12 +8,12 @@
 atlas = ExtResource("1_6k4o2")
 region = Rect2(54.025, 37.2715, 221.296, 120.893)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qx2ar"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hytps"]
 atlas = ExtResource("1_6k4o2")
 region = Rect2(50.079, 213.776, 225.277, 123.671)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_du1la"]
-atlas = SubResource("AtlasTexture_qx2ar")
+atlas = SubResource("AtlasTexture_hytps")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jcg17"]
 atlas = ExtResource("1_6k4o2")

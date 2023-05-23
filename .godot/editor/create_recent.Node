@@ -1,8 +1,8 @@
+Timer
+Node2D
 Camera2D
 TouchScreenButton
 CollisionShape2D
 Area2D
-Node2D
 Sprite2D
 Label
-Timer
