@@ -25,8 +25,7 @@ func makeVis():
 			Dots[i] = true
 			count += 1
 	if count >= self.get_child_count():
-		get_parent().cardNumber += 1
-		get_parent().newCard()
-		queue_free()
+		pass
+		#win
 	queue_redraw()
 	

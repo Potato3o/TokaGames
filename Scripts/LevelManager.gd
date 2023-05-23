@@ -10,9 +10,6 @@ var cards
 
 # loads cards and places the first one
 func _ready():
-	if cardColor == 1 && cardNumber != 0:
-		cardNumber -= 1
-		
 	cards = LevelType.instantiate()
 	var firstcard = cards.get_child(cardColor).get_child(cardNumber).duplicate()
 	firstcard.position = Vector2.ZERO
