@@ -6,7 +6,4 @@
 script = ExtResource("1_8ehhq")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 1.833)
-
-[node name="Timer" type="Timer" parent="."]
-one_shot = true
+zoom = Vector2(1.8, 1.7)
