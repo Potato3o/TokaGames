@@ -1,12 +1,21 @@
-[gd_scene load_steps=10 format=3 uid="uid://dk8iaroau1cqc"]
+[gd_scene load_steps=19 format=3 uid="uid://cbqkkc3qwq1ia"]
 
-[ext_resource type="Script" path="res://DragAndDrop.gd" id="1_yfqst"]
+[ext_resource type="Script" path="res://Scripts/DragAndDrop/DragAndDrop.gd" id="1_tqbt6"]
 [ext_resource type="Texture2D" uid="uid://bqbw4u8nngd2q" path="res://Sprites/YellowCards/Yellow1.png" id="2_x3w1o"]
+[ext_resource type="Script" path="res://Scripts/DragAndDrop/Drag&Drop.gd" id="3_0bj8u"]
 [ext_resource type="Texture2D" uid="uid://3a3wlxc1eu5f" path="res://Sprites/BlueCards/Blue1.png" id="3_8wqmb"]
 [ext_resource type="Texture2D" uid="uid://bf0s8f4po5rcp" path="res://Sprites/YellowCards/Yellow2.png" id="4_7cw0g"]
-[ext_resource type="Script" path="res://Blue1.gd" id="4_o3x81"]
 [ext_resource type="Texture2D" uid="uid://k751ebyfjgtx" path="res://Sprites/BlueCards/Blue2.png" id="5_v3y6t"]
-[ext_resource type="Script" path="res://Yellow2.gd" id="6_35iuv"]
+[ext_resource type="Texture2D" uid="uid://btqepvbip7u0x" path="res://Sprites/BlueCards/Blue3.png" id="7_wcsnk"]
+[ext_resource type="Texture2D" uid="uid://df4q0u6ejlqdx" path="res://Sprites/BlueCards/Blue4.png" id="8_2xkcn"]
+[ext_resource type="Texture2D" uid="uid://be7tglf8e3c1w" path="res://Sprites/BlueCards/Blue5.png" id="9_dljtl"]
+[ext_resource type="Texture2D" uid="uid://c7xs3nht3dv28" path="res://Sprites/BlueCards/Blue6.png" id="10_2a4tc"]
+[ext_resource type="Texture2D" uid="uid://b7rnx2dxljsa8" path="res://Sprites/BlueCards/Blue7.png" id="11_wuoe3"]
+[ext_resource type="Texture2D" uid="uid://dsbttnht56ng0" path="res://Sprites/BlueCards/Blue8.png" id="12_ddst7"]
+[ext_resource type="Texture2D" uid="uid://dxscqaqj3pdnm" path="res://Sprites/BlueCards/Blue9.png" id="13_ojkwi"]
+[ext_resource type="Texture2D" uid="uid://cughhfh4fpq0n" path="res://Sprites/BlueCards/Blue10.png" id="14_0xxuh"]
+[ext_resource type="Texture2D" uid="uid://fnka7tvfh12k" path="res://Sprites/YellowCards/Yellow3.png" id="15_4gh7y"]
+[ext_resource type="Texture2D" uid="uid://blwqcs2pgmbti" path="res://Sprites/YellowCards/Yellow4.png" id="16_ysv27"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oyd5k"]
 size = Vector2(601, 1047)
@@ -14,26 +23,17 @@ size = Vector2(601, 1047)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vegf1"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_yfqst")
+position = Vector2(333, -453)
+script = ExtResource("1_tqbt6")
 
-[node name="Yellow1" type="Sprite2D" parent="." groups=["Yellow"]]
-position = Vector2(-623, 196)
-texture = ExtResource("2_x3w1o")
-
-[node name="Area2D" type="Area2D" parent="Yellow1"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Yellow1/Area2D"]
-position = Vector2(-0.5, 0.5)
-shape = SubResource("RectangleShape2D_oyd5k")
-
-[node name="Yellow1Button" type="TouchScreenButton" parent="Yellow1"]
-scale = Vector2(-30.0041, -52.3519)
-shape = SubResource("RectangleShape2D_vegf1")
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(2320, 851)
+zoom = Vector2(0.1, 0.1)
 
 [node name="Blue1" type="Sprite2D" parent="." groups=["Blue"]]
-position = Vector2(914, 189)
+position = Vector2(-1493, 199)
 texture = ExtResource("3_8wqmb")
-script = ExtResource("4_o3x81")
+script = ExtResource("3_0bj8u")
 
 [node name="Area2D" type="Area2D" parent="Blue1"]
 
@@ -45,14 +45,161 @@ shape = SubResource("RectangleShape2D_oyd5k")
 scale = Vector2(-30.0041, -52.3519)
 shape = SubResource("RectangleShape2D_vegf1")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(5, 72)
-zoom = Vector2(0.25, 0.25)
+[node name="Blue2" type="Sprite2D" parent="." groups=["Blue"]]
+position = Vector2(-657, 186)
+texture = ExtResource("5_v3y6t")
+script = ExtResource("3_0bj8u")
+
+[node name="Area2D" type="Area2D" parent="Blue2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue2/Area2D"]
+position = Vector2(0, 10)
+shape = SubResource("RectangleShape2D_oyd5k")
+
+[node name="Blue2Button" type="TouchScreenButton" parent="Blue2"]
+position = Vector2(0, 10)
+scale = Vector2(-30.0041, -52.3519)
+shape = SubResource("RectangleShape2D_vegf1")
+
+[node name="Blue3" type="Sprite2D" parent="." groups=["Blue"]]
+position = Vector2(256, 166)
+texture = ExtResource("7_wcsnk")
+script = ExtResource("3_0bj8u")
+
+[node name="Area2D" type="Area2D" parent="Blue3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue3/Area2D"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_oyd5k")
+
+[node name="Blue3Button" type="TouchScreenButton" parent="Blue3"]
+scale = Vector2(-30.0041, -52.3519)
+shape = SubResource("RectangleShape2D_vegf1")
+
+[node name="Blue4" type="Sprite2D" parent="." groups=["Blue"]]
+position = Vector2(1097, 163)
+texture = ExtResource("8_2xkcn")
+script = ExtResource("3_0bj8u")
+
+[node name="Area2D" type="Area2D" parent="Blue4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue4/Area2D"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_oyd5k")
+
+[node name="Blue4Button" type="TouchScreenButton" parent="Blue4"]
+scale = Vector2(-30.0041, -52.3519)
+shape = SubResource("RectangleShape2D_vegf1")
+
+[node name="Blue5" type="Sprite2D" parent="." groups=["Blue"]]
+position = Vector2(1900, 141)
+texture = ExtResource("9_dljtl")
+script = ExtResource("3_0bj8u")
+
+[node name="Area2D" type="Area2D" parent="Blue5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue5/Area2D"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_oyd5k")
+
+[node name="Blue5Button" type="TouchScreenButton" parent="Blue5"]
+scale = Vector2(-30.0041, -52.3519)
+shape = SubResource("RectangleShape2D_vegf1")
+
+[node name="Blue6" type="Sprite2D" parent="." groups=["Blue"]]
+position = Vector2(2681, 129)
+texture = ExtResource("10_2a4tc")
+script = ExtResource("3_0bj8u")
+
+[node name="Area2D" type="Area2D" parent="Blue6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue6/Area2D"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_oyd5k")
+
+[node name="Blue6Button" type="TouchScreenButton" parent="Blue6"]
+scale = Vector2(-30.0041, -52.3519)
+shape = SubResource("RectangleShape2D_vegf1")
+
+[node name="Blue7" type="Sprite2D" parent="." groups=["Blue"]]
+position = Vector2(3540, 118)
+texture = ExtResource("11_wuoe3")
+script = ExtResource("3_0bj8u")
+
+[node name="Area2D" type="Area2D" parent="Blue7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue7/Area2D"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_oyd5k")
+
+[node name="Blue7Button" type="TouchScreenButton" parent="Blue7"]
+scale = Vector2(-30.0041, -52.3519)
+shape = SubResource("RectangleShape2D_vegf1")
+
+[node name="Blue8" type="Sprite2D" parent="." groups=["Blue"]]
+position = Vector2(4321, 118)
+texture = ExtResource("12_ddst7")
+script = ExtResource("3_0bj8u")
+
+[node name="Area2D" type="Area2D" parent="Blue8"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue8/Area2D"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_oyd5k")
+
+[node name="Blue8Button" type="TouchScreenButton" parent="Blue8"]
+scale = Vector2(-30.0041, -52.3519)
+shape = SubResource("RectangleShape2D_vegf1")
+
+[node name="Blue9" type="Sprite2D" parent="." groups=["Blue"]]
+position = Vector2(5126, 114)
+texture = ExtResource("13_ojkwi")
+script = ExtResource("3_0bj8u")
+
+[node name="Area2D" type="Area2D" parent="Blue9"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue9/Area2D"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_oyd5k")
+
+[node name="Blue9Button" type="TouchScreenButton" parent="Blue9"]
+scale = Vector2(-30.0041, -52.3519)
+shape = SubResource("RectangleShape2D_vegf1")
+
+[node name="Blue10" type="Sprite2D" parent="." groups=["Blue"]]
+position = Vector2(5952, 96)
+texture = ExtResource("14_0xxuh")
+script = ExtResource("3_0bj8u")
+
+[node name="Area2D" type="Area2D" parent="Blue10"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue10/Area2D"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_oyd5k")
+
+[node name="Blue10Button" type="TouchScreenButton" parent="Blue10"]
+scale = Vector2(-30.0041, -52.3519)
+shape = SubResource("RectangleShape2D_vegf1")
+
+[node name="Yellow1" type="Sprite2D" parent="." groups=["Yellow"]]
+position = Vector2(-1489, 1481)
+texture = ExtResource("2_x3w1o")
+script = ExtResource("3_0bj8u")
+
+[node name="Area2D" type="Area2D" parent="Yellow1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Yellow1/Area2D"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_oyd5k")
+
+[node name="Yellow1Button" type="TouchScreenButton" parent="Yellow1"]
+scale = Vector2(-30.0041, -52.3519)
+shape = SubResource("RectangleShape2D_vegf1")
 
 [node name="Yellow2" type="Sprite2D" parent="." groups=["Yellow"]]
 position = Vector2(-582, 1499)
 texture = ExtResource("4_7cw0g")
-script = ExtResource("6_35iuv")
+script = ExtResource("3_0bj8u")
 
 [node name="Area2D" type="Area2D" parent="Yellow2"]
 
@@ -64,24 +211,61 @@ shape = SubResource("RectangleShape2D_oyd5k")
 scale = Vector2(-30.0041, -52.3519)
 shape = SubResource("RectangleShape2D_vegf1")
 
-[node name="Blue2" type="Sprite2D" parent="." groups=["Blue"]]
-position = Vector2(694, 1499)
-texture = ExtResource("5_v3y6t")
+[node name="Yellow3" type="Sprite2D" parent="." groups=["Yellow"]]
+position = Vector2(280, 1481)
+texture = ExtResource("15_4gh7y")
+script = ExtResource("3_0bj8u")
 
-[node name="Area2D" type="Area2D" parent="Blue2"]
+[node name="Area2D" type="Area2D" parent="Yellow3"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Blue2/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Yellow3/Area2D"]
 position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_oyd5k")
 
-[node name="Bue2Button" type="TouchScreenButton" parent="Blue2"]
+[node name="Yellow3Button" type="TouchScreenButton" parent="Yellow3"]
 scale = Vector2(-30.0041, -52.3519)
 shape = SubResource("RectangleShape2D_vegf1")
 
-[connection signal="area_entered" from="Yellow1/Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="pressed" from="Yellow1/Yellow1Button" to="." method="_on_button_pressed"]
-[connection signal="released" from="Yellow1/Yellow1Button" to="." method="_on_button_released"]
+[node name="Yellow4" type="Sprite2D" parent="." groups=["Yellow"]]
+position = Vector2(1124, 1463)
+texture = ExtResource("16_ysv27")
+script = ExtResource("3_0bj8u")
+
+[node name="Area2D" type="Area2D" parent="Yellow4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Yellow4/Area2D"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_oyd5k")
+
+[node name="Yellow4Button" type="TouchScreenButton" parent="Yellow4"]
+scale = Vector2(-30.0041, -52.3519)
+shape = SubResource("RectangleShape2D_vegf1")
+
 [connection signal="pressed" from="Blue1/Blue1Button" to="Blue1" method="_on_button_pressed"]
-[connection signal="released" from="Blue1/Blue1Button" to="Blue1" method="_on_blue_1_button_released"]
+[connection signal="released" from="Blue1/Blue1Button" to="Blue1" method="_on_button_released"]
+[connection signal="pressed" from="Blue2/Blue2Button" to="Blue2" method="_on_button_pressed"]
+[connection signal="released" from="Blue2/Blue2Button" to="Blue2" method="_on_button_released"]
+[connection signal="pressed" from="Blue3/Blue3Button" to="Blue3" method="_on_button_pressed"]
+[connection signal="released" from="Blue3/Blue3Button" to="Blue3" method="_on_button_released"]
+[connection signal="pressed" from="Blue4/Blue4Button" to="Blue4" method="_on_button_pressed"]
+[connection signal="released" from="Blue4/Blue4Button" to="Blue4" method="_on_button_released"]
+[connection signal="pressed" from="Blue5/Blue5Button" to="Blue5" method="_on_button_pressed"]
+[connection signal="released" from="Blue5/Blue5Button" to="Blue5" method="_on_button_released"]
+[connection signal="pressed" from="Blue6/Blue6Button" to="Blue6" method="_on_button_pressed"]
+[connection signal="released" from="Blue6/Blue6Button" to="Blue6" method="_on_button_released"]
+[connection signal="pressed" from="Blue7/Blue7Button" to="Blue7" method="_on_button_pressed"]
+[connection signal="released" from="Blue7/Blue7Button" to="Blue7" method="_on_button_released"]
+[connection signal="pressed" from="Blue8/Blue8Button" to="Blue8" method="_on_button_pressed"]
+[connection signal="released" from="Blue8/Blue8Button" to="Blue8" method="_on_button_released"]
+[connection signal="pressed" from="Blue9/Blue9Button" to="Blue9" method="_on_button_pressed"]
+[connection signal="released" from="Blue9/Blue9Button" to="Blue9" method="_on_button_released"]
+[connection signal="pressed" from="Blue10/Blue10Button" to="Blue10" method="_on_button_pressed"]
+[connection signal="released" from="Blue10/Blue10Button" to="Blue10" method="_on_button_released"]
+[connection signal="pressed" from="Yellow1/Yellow1Button" to="Yellow1" method="_on_button_pressed"]
+[connection signal="released" from="Yellow1/Yellow1Button" to="Yellow1" method="_on_button_released"]
 [connection signal="pressed" from="Yellow2/Yellow2Button" to="Yellow2" method="_on_button_pressed"]
-[connection signal="released" from="Yellow2/Yellow2Button" to="Yellow2" method="_on_yellow_2_button_released"]
+[connection signal="released" from="Yellow2/Yellow2Button" to="Yellow2" method="_on_button_released"]
+[connection signal="pressed" from="Yellow3/Yellow3Button" to="Yellow3" method="_on_button_pressed"]
+[connection signal="released" from="Yellow3/Yellow3Button" to="Yellow3" method="_on_button_released"]
+[connection signal="pressed" from="Yellow4/Yellow4Button" to="Yellow4" method="_on_button_pressed"]
+[connection signal="released" from="Yellow4/Yellow4Button" to="Yellow4" method="_on_button_released"]

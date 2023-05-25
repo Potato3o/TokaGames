@@ -25,7 +25,7 @@ func _caterpillar(i):
 		var smiley = get_tree().get_nodes_in_group("caterpillar")[0]
 		circle.position = to_local(smiley.position) + Vector2((60*x),0)
 		x = x+1
-		circle.z_index = circle.z_index-(1*x)
+		circle.z_index = circle.z_index-(x)
 		add_child(circle)
 func _on_pressed():
 	#$"../levels menu".enabled = true
