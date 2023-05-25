@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://ch2u2xlq2wfau"]
+[gd_scene load_steps=38 format=3 uid="uid://ch2u2xlq2wfau"]
 
 [ext_resource type="Texture2D" uid="uid://d05tj0swu2ivl" path="res://Sprites/BlueCards/Blue0.png" id="1_0adol"]
 [ext_resource type="Script" path="res://Scripts/TraceTracker.gd" id="3_1kaoy"]
@@ -30,6 +30,26 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6aag4"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_ax32n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mriyx"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_id7y1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f35ro"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tm47y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_18v4e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8rtxp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jj6qu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7un6x"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7dguf"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_hawek"]
 radius = 32.52
 
@@ -46,71 +66,85 @@ script = ExtResource("3_1kaoy")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="BlueCards/Blue0/CorrectAreas"]
 position = Vector2(-70, -4)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="BlueCards/Blue0/CorrectAreas"]
 position = Vector2(-71, 29)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="BlueCards/Blue0/CorrectAreas"]
 position = Vector2(-61, 57)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton4" type="TouchScreenButton" parent="BlueCards/Blue0/CorrectAreas"]
 position = Vector2(-43, 84)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue0/CorrectAreas"]
 position = Vector2(-12, 99)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue0/CorrectAreas"]
 position = Vector2(21, 96)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue0/CorrectAreas"]
 position = Vector2(49, 80)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue0/CorrectAreas"]
 position = Vector2(67, 49)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton9" type="TouchScreenButton" parent="BlueCards/Blue0/CorrectAreas"]
 position = Vector2(71, 15)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton10" type="TouchScreenButton" parent="BlueCards/Blue0/CorrectAreas"]
 position = Vector2(63, -19)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton11" type="TouchScreenButton" parent="BlueCards/Blue0/CorrectAreas"]
 position = Vector2(43, -49)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton12" type="TouchScreenButton" parent="BlueCards/Blue0/CorrectAreas"]
 position = Vector2(11, -64)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton13" type="TouchScreenButton" parent="BlueCards/Blue0/CorrectAreas"]
 position = Vector2(-25, -62)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton14" type="TouchScreenButton" parent="BlueCards/Blue0/CorrectAreas"]
 position = Vector2(-54, -40)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
@@ -160,41 +194,49 @@ script = ExtResource("3_1kaoy")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="BlueCards/Blue1/CorrectAreas"]
 position = Vector2(7, -3)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="BlueCards/Blue1/CorrectAreas"]
 position = Vector2(-29, 70)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="BlueCards/Blue1/CorrectAreas"]
 position = Vector2(6, 71)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton4" type="TouchScreenButton" parent="BlueCards/Blue1/CorrectAreas"]
 position = Vector2(38, 70)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue1/CorrectAreas"]
 position = Vector2(8, 32)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue1/CorrectAreas"]
 position = Vector2(8, -36)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue1/CorrectAreas"]
 position = Vector2(8, -75)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue1/CorrectAreas"]
 position = Vector2(-31, -59)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
@@ -221,6 +263,27 @@ scale = Vector2(9.57761, 16.5442)
 shape = SubResource("RectangleShape2D_6aag4")
 passby_press = true
 
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue1/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-53, 9)
+scale = Vector2(1.96479, 1.99842)
+shape = SubResource("CircleShape2D_ax32n")
+passby_press = true
+
+[node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue1/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(68, -62)
+scale = Vector2(1.96479, 1.99842)
+shape = SubResource("CircleShape2D_ax32n")
+passby_press = true
+
+[node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue1/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(67, 14)
+scale = Vector2(1.96479, 1.99842)
+shape = SubResource("CircleShape2D_ax32n")
+passby_press = true
+
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue1/WrongAreas"]
 modulate = Color(1, 0.0470588, 1, 1)
 position = Vector2(205, 7)
@@ -237,46 +300,55 @@ script = ExtResource("3_1kaoy")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="BlueCards/Blue2/CorrectAreas"]
 position = Vector2(26, -6)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="BlueCards/Blue2/CorrectAreas"]
 position = Vector2(2, 23)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="BlueCards/Blue2/CorrectAreas"]
 position = Vector2(-26, 51)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton4" type="TouchScreenButton" parent="BlueCards/Blue2/CorrectAreas"]
 position = Vector2(-41, 87)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue2/CorrectAreas"]
 position = Vector2(-8, 95)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue2/CorrectAreas"]
 position = Vector2(27, 95)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue2/CorrectAreas"]
 position = Vector2(36, -35)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue2/CorrectAreas"]
 position = Vector2(11, -63)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton9" type="TouchScreenButton" parent="BlueCards/Blue2/CorrectAreas"]
 position = Vector2(-25, -61)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
@@ -303,6 +375,27 @@ scale = Vector2(9.57761, 16.5442)
 shape = SubResource("RectangleShape2D_6aag4")
 passby_press = true
 
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue2/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-51, 1)
+scale = Vector2(-2.00903, 1.75178)
+shape = SubResource("CircleShape2D_mriyx")
+passby_press = true
+
+[node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue2/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(72, 43)
+scale = Vector2(-2.00903, 1.75178)
+shape = SubResource("CircleShape2D_mriyx")
+passby_press = true
+
+[node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue2/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(73, -94)
+scale = Vector2(-2.00903, 1.75178)
+shape = SubResource("CircleShape2D_mriyx")
+passby_press = true
+
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue2/WrongAreas"]
 modulate = Color(1, 0.0470588, 1, 1)
 position = Vector2(205, 7)
@@ -319,51 +412,61 @@ script = ExtResource("3_1kaoy")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="BlueCards/Blue3/CorrectAreas"]
 position = Vector2(-26, 12)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="BlueCards/Blue3/CorrectAreas"]
 position = Vector2(5, 17)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="BlueCards/Blue3/CorrectAreas"]
 position = Vector2(32, 41)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton4" type="TouchScreenButton" parent="BlueCards/Blue3/CorrectAreas"]
 position = Vector2(30, 78)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue3/CorrectAreas"]
 position = Vector2(-4, 98)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue3/CorrectAreas"]
 position = Vector2(-40, 92)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue3/CorrectAreas"]
 position = Vector2(24, -9)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue3/CorrectAreas"]
 position = Vector2(29, -43)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton9" type="TouchScreenButton" parent="BlueCards/Blue3/CorrectAreas"]
 position = Vector2(-2, -64)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton10" type="TouchScreenButton" parent="BlueCards/Blue3/CorrectAreas"]
 position = Vector2(-37, -59)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
@@ -390,6 +493,48 @@ scale = Vector2(9.57761, 16.5442)
 shape = SubResource("RectangleShape2D_6aag4")
 passby_press = true
 
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue3/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-16, -24)
+scale = Vector2(1.69131, 1.55092)
+shape = SubResource("CircleShape2D_id7y1")
+passby_press = true
+
+[node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue3/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-14, 55)
+scale = Vector2(1.69131, 1.55092)
+shape = SubResource("CircleShape2D_id7y1")
+passby_press = true
+
+[node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue3/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-78, 14)
+scale = Vector2(1.69131, 1.55092)
+shape = SubResource("CircleShape2D_id7y1")
+passby_press = true
+
+[node name="TouchScreenButton9" type="TouchScreenButton" parent="BlueCards/Blue3/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(84, 11)
+scale = Vector2(1.69131, 1.55092)
+shape = SubResource("CircleShape2D_id7y1")
+passby_press = true
+
+[node name="TouchScreenButton10" type="TouchScreenButton" parent="BlueCards/Blue3/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(78, -96)
+scale = Vector2(1.69131, 1.55092)
+shape = SubResource("CircleShape2D_id7y1")
+passby_press = true
+
+[node name="TouchScreenButton11" type="TouchScreenButton" parent="BlueCards/Blue3/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(84, 112)
+scale = Vector2(1.69131, 1.55092)
+shape = SubResource("CircleShape2D_id7y1")
+passby_press = true
+
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue3/WrongAreas"]
 modulate = Color(1, 0.0470588, 1, 1)
 position = Vector2(205, 7)
@@ -406,56 +551,67 @@ script = ExtResource("3_1kaoy")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="BlueCards/Blue4/CorrectAreas"]
 position = Vector2(-3, -59)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="BlueCards/Blue4/CorrectAreas"]
 position = Vector2(-16, -28)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="BlueCards/Blue4/CorrectAreas"]
 position = Vector2(-30, 5)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton4" type="TouchScreenButton" parent="BlueCards/Blue4/CorrectAreas"]
 position = Vector2(-43, 36)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue4/CorrectAreas"]
 position = Vector2(-43, 60)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue4/CorrectAreas"]
 position = Vector2(-12, 59)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue4/CorrectAreas"]
 position = Vector2(25, 57)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue4/CorrectAreas"]
 position = Vector2(51, 57)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton9" type="TouchScreenButton" parent="BlueCards/Blue4/CorrectAreas"]
 position = Vector2(27, 29)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton10" type="TouchScreenButton" parent="BlueCards/Blue4/CorrectAreas"]
 position = Vector2(27, 3)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton11" type="TouchScreenButton" parent="BlueCards/Blue4/CorrectAreas"]
 position = Vector2(28, 87)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
@@ -482,6 +638,34 @@ scale = Vector2(9.57761, 16.5442)
 shape = SubResource("RectangleShape2D_6aag4")
 passby_press = true
 
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue4/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(64, -52)
+scale = Vector2(2.25405, 2.07848)
+shape = SubResource("CircleShape2D_f35ro")
+passby_press = true
+
+[node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue4/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-38, 108)
+scale = Vector2(2.25405, 2.07848)
+shape = SubResource("CircleShape2D_f35ro")
+passby_press = true
+
+[node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue4/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(82, 102)
+scale = Vector2(2.25405, 2.07848)
+shape = SubResource("CircleShape2D_f35ro")
+passby_press = true
+
+[node name="TouchScreenButton9" type="TouchScreenButton" parent="BlueCards/Blue4/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-71, -83)
+scale = Vector2(2.25405, 2.07848)
+shape = SubResource("CircleShape2D_f35ro")
+passby_press = true
+
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue4/WrongAreas"]
 modulate = Color(1, 0.0470588, 1, 1)
 position = Vector2(205, 7)
@@ -498,56 +682,67 @@ script = ExtResource("3_1kaoy")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="BlueCards/Blue5/CorrectAreas"]
 position = Vector2(34, -61)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="BlueCards/Blue5/CorrectAreas"]
 position = Vector2(3, -61)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="BlueCards/Blue5/CorrectAreas"]
 position = Vector2(-32, -61)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton4" type="TouchScreenButton" parent="BlueCards/Blue5/CorrectAreas"]
 position = Vector2(-31, -32)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue5/CorrectAreas"]
 position = Vector2(-31, 2)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue5/CorrectAreas"]
 position = Vector2(3, 9)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue5/CorrectAreas"]
 position = Vector2(32, 26)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue5/CorrectAreas"]
 position = Vector2(40, 55)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton9" type="TouchScreenButton" parent="BlueCards/Blue5/CorrectAreas"]
 position = Vector2(26, 84)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton10" type="TouchScreenButton" parent="BlueCards/Blue5/CorrectAreas"]
 position = Vector2(-5, 98)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton11" type="TouchScreenButton" parent="BlueCards/Blue5/CorrectAreas"]
 position = Vector2(-36, 92)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
@@ -574,6 +769,34 @@ scale = Vector2(9.57761, 16.5442)
 shape = SubResource("RectangleShape2D_6aag4")
 passby_press = true
 
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue5/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-13, 50)
+scale = Vector2(2.0139, 1.95621)
+shape = SubResource("CircleShape2D_tm47y")
+passby_press = true
+
+[node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue5/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(79, -15)
+scale = Vector2(2.0139, 1.95621)
+shape = SubResource("CircleShape2D_tm47y")
+passby_press = true
+
+[node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue5/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-82, -101)
+scale = Vector2(2.0139, 1.95621)
+shape = SubResource("CircleShape2D_tm47y")
+passby_press = true
+
+[node name="TouchScreenButton9" type="TouchScreenButton" parent="BlueCards/Blue5/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-79, 39)
+scale = Vector2(2.0139, 1.95621)
+shape = SubResource("CircleShape2D_tm47y")
+passby_press = true
+
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue5/WrongAreas"]
 modulate = Color(1, 0.0470588, 1, 1)
 position = Vector2(205, 7)
@@ -590,66 +813,79 @@ script = ExtResource("3_1kaoy")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="BlueCards/Blue6/CorrectAreas"]
 position = Vector2(34, -61)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="BlueCards/Blue6/CorrectAreas"]
 position = Vector2(3, -56)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="BlueCards/Blue6/CorrectAreas"]
 position = Vector2(-26, -35)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton4" type="TouchScreenButton" parent="BlueCards/Blue6/CorrectAreas"]
 position = Vector2(-43, -6)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue6/CorrectAreas"]
 position = Vector2(-47, 24)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue6/CorrectAreas"]
 position = Vector2(-44, 58)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue6/CorrectAreas"]
 position = Vector2(-25, 87)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue6/CorrectAreas"]
 position = Vector2(4, 95)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton9" type="TouchScreenButton" parent="BlueCards/Blue6/CorrectAreas"]
 position = Vector2(32, 84)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton10" type="TouchScreenButton" parent="BlueCards/Blue6/CorrectAreas"]
 position = Vector2(47, 54)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton11" type="TouchScreenButton" parent="BlueCards/Blue6/CorrectAreas"]
 position = Vector2(40, 25)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton12" type="TouchScreenButton" parent="BlueCards/Blue6/CorrectAreas"]
 position = Vector2(14, 2)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton13" type="TouchScreenButton" parent="BlueCards/Blue6/CorrectAreas"]
 position = Vector2(-15, 8)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
@@ -676,6 +912,41 @@ scale = Vector2(9.57761, 16.5442)
 shape = SubResource("RectangleShape2D_6aag4")
 passby_press = true
 
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue6/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(1, 47)
+scale = Vector2(1.47964, 1.56668)
+shape = SubResource("CircleShape2D_18v4e")
+passby_press = true
+
+[node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue6/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(84, -41)
+scale = Vector2(1.47964, 1.56668)
+shape = SubResource("CircleShape2D_18v4e")
+passby_press = true
+
+[node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue6/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(83, 110)
+scale = Vector2(1.47964, 1.56668)
+shape = SubResource("CircleShape2D_18v4e")
+passby_press = true
+
+[node name="TouchScreenButton9" type="TouchScreenButton" parent="BlueCards/Blue6/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-82, 110)
+scale = Vector2(1.47964, 1.56668)
+shape = SubResource("CircleShape2D_18v4e")
+passby_press = true
+
+[node name="TouchScreenButton10" type="TouchScreenButton" parent="BlueCards/Blue6/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-67, -79)
+scale = Vector2(1.47964, 1.56668)
+shape = SubResource("CircleShape2D_18v4e")
+passby_press = true
+
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue6/WrongAreas"]
 modulate = Color(1, 0.0470588, 1, 1)
 position = Vector2(205, 7)
@@ -692,46 +963,55 @@ script = ExtResource("3_1kaoy")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="BlueCards/Blue7/CorrectAreas"]
 position = Vector2(-43, -61)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="BlueCards/Blue7/CorrectAreas"]
 position = Vector2(-14, -61)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="BlueCards/Blue7/CorrectAreas"]
 position = Vector2(15, -61)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton4" type="TouchScreenButton" parent="BlueCards/Blue7/CorrectAreas"]
 position = Vector2(45, -61)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue7/CorrectAreas"]
 position = Vector2(30, -35)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue7/CorrectAreas"]
 position = Vector2(12, -10)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue7/CorrectAreas"]
 position = Vector2(-2, 20)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue7/CorrectAreas"]
 position = Vector2(-11, 50)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton9" type="TouchScreenButton" parent="BlueCards/Blue7/CorrectAreas"]
 position = Vector2(-13, 83)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
@@ -758,6 +1038,48 @@ scale = Vector2(9.57761, 16.5442)
 shape = SubResource("RectangleShape2D_6aag4")
 passby_press = true
 
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue7/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-42, -16)
+scale = Vector2(1.74333, 1.56872)
+shape = SubResource("CircleShape2D_8rtxp")
+passby_press = true
+
+[node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue7/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-69, 94)
+scale = Vector2(1.74333, 1.56872)
+shape = SubResource("CircleShape2D_8rtxp")
+passby_press = true
+
+[node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue7/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(45, 92)
+scale = Vector2(1.74333, 1.56872)
+shape = SubResource("CircleShape2D_8rtxp")
+passby_press = true
+
+[node name="TouchScreenButton9" type="TouchScreenButton" parent="BlueCards/Blue7/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(74, 6)
+scale = Vector2(1.74333, 1.56872)
+shape = SubResource("CircleShape2D_8rtxp")
+passby_press = true
+
+[node name="TouchScreenButton10" type="TouchScreenButton" parent="BlueCards/Blue7/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(47, -108)
+scale = Vector2(1.74333, 1.56872)
+shape = SubResource("CircleShape2D_8rtxp")
+passby_press = true
+
+[node name="TouchScreenButton11" type="TouchScreenButton" parent="BlueCards/Blue7/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(90, -31)
+scale = Vector2(1.74333, 1.56872)
+shape = SubResource("CircleShape2D_8rtxp")
+passby_press = true
+
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue7/WrongAreas"]
 modulate = Color(1, 0.0470588, 1, 1)
 position = Vector2(205, 7)
@@ -774,81 +1096,97 @@ script = ExtResource("3_1kaoy")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="BlueCards/Blue8/CorrectAreas"]
 position = Vector2(-33, -55)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="BlueCards/Blue8/CorrectAreas"]
 position = Vector2(-5, -64)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="BlueCards/Blue8/CorrectAreas"]
 position = Vector2(23, -61)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton4" type="TouchScreenButton" parent="BlueCards/Blue8/CorrectAreas"]
 position = Vector2(38, -36)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue8/CorrectAreas"]
 position = Vector2(28, -5)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue8/CorrectAreas"]
 position = Vector2(-3, 11)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue8/CorrectAreas"]
 position = Vector2(-29, -5)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue8/CorrectAreas"]
 position = Vector2(-44, -30)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton9" type="TouchScreenButton" parent="BlueCards/Blue8/CorrectAreas"]
 position = Vector2(-37, 26)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton10" type="TouchScreenButton" parent="BlueCards/Blue8/CorrectAreas"]
 position = Vector2(-50, 56)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton11" type="TouchScreenButton" parent="BlueCards/Blue8/CorrectAreas"]
 position = Vector2(-39, 85)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton12" type="TouchScreenButton" parent="BlueCards/Blue8/CorrectAreas"]
 position = Vector2(-10, 99)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton13" type="TouchScreenButton" parent="BlueCards/Blue8/CorrectAreas"]
 position = Vector2(20, 94)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton14" type="TouchScreenButton" parent="BlueCards/Blue8/CorrectAreas"]
 position = Vector2(46, 73)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton15" type="TouchScreenButton" parent="BlueCards/Blue8/CorrectAreas"]
 position = Vector2(45, 44)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton16" type="TouchScreenButton" parent="BlueCards/Blue8/CorrectAreas"]
 position = Vector2(24, 21)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
@@ -875,6 +1213,55 @@ scale = Vector2(9.57761, 16.5442)
 shape = SubResource("RectangleShape2D_6aag4")
 passby_press = true
 
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue8/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-1, -29)
+scale = Vector2(0.976577, 1.05168)
+shape = SubResource("CircleShape2D_jj6qu")
+passby_press = true
+
+[node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue8/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-1, 55)
+scale = Vector2(0.976577, 1.05168)
+shape = SubResource("CircleShape2D_jj6qu")
+passby_press = true
+
+[node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue8/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(81, 6)
+scale = Vector2(1.31148, 1.41234)
+shape = SubResource("CircleShape2D_jj6qu")
+passby_press = true
+
+[node name="TouchScreenButton9" type="TouchScreenButton" parent="BlueCards/Blue8/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-2, -106)
+scale = Vector2(1.31148, 1.41234)
+shape = SubResource("CircleShape2D_jj6qu")
+passby_press = true
+
+[node name="TouchScreenButton10" type="TouchScreenButton" parent="BlueCards/Blue8/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-87, 7.00002)
+scale = Vector2(1.31148, 1.41234)
+shape = SubResource("CircleShape2D_jj6qu")
+passby_press = true
+
+[node name="TouchScreenButton11" type="TouchScreenButton" parent="BlueCards/Blue8/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-85, 113)
+scale = Vector2(1.31148, 1.41234)
+shape = SubResource("CircleShape2D_jj6qu")
+passby_press = true
+
+[node name="TouchScreenButton12" type="TouchScreenButton" parent="BlueCards/Blue8/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(84, 114)
+scale = Vector2(1.31148, 1.41234)
+shape = SubResource("CircleShape2D_jj6qu")
+passby_press = true
+
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue8/WrongAreas"]
 modulate = Color(1, 0.0470588, 1, 1)
 position = Vector2(205, 7)
@@ -891,71 +1278,85 @@ script = ExtResource("3_1kaoy")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="BlueCards/Blue9/CorrectAreas"]
 position = Vector2(-33, -55)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="BlueCards/Blue9/CorrectAreas"]
 position = Vector2(-4, -65)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="BlueCards/Blue9/CorrectAreas"]
 position = Vector2(26, -56)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton4" type="TouchScreenButton" parent="BlueCards/Blue9/CorrectAreas"]
 position = Vector2(38, -28)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue9/CorrectAreas"]
 position = Vector2(42, 2)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue9/CorrectAreas"]
 position = Vector2(14, 23)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue9/CorrectAreas"]
 position = Vector2(-24, 24)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue9/CorrectAreas"]
 position = Vector2(-46, 1)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton9" type="TouchScreenButton" parent="BlueCards/Blue9/CorrectAreas"]
 position = Vector2(-46, -27)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton10" type="TouchScreenButton" parent="BlueCards/Blue9/CorrectAreas"]
 position = Vector2(41, 33)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton11" type="TouchScreenButton" parent="BlueCards/Blue9/CorrectAreas"]
 position = Vector2(34, 62)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton12" type="TouchScreenButton" parent="BlueCards/Blue9/CorrectAreas"]
 position = Vector2(15, 91)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton13" type="TouchScreenButton" parent="BlueCards/Blue9/CorrectAreas"]
 position = Vector2(-16, 100)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton14" type="TouchScreenButton" parent="BlueCards/Blue9/CorrectAreas"]
 position = Vector2(-43, 88)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
@@ -982,6 +1383,48 @@ scale = Vector2(9.57761, 16.5442)
 shape = SubResource("RectangleShape2D_6aag4")
 passby_press = true
 
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue9/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-2, -18)
+scale = Vector2(1.54081, 1.46473)
+shape = SubResource("CircleShape2D_7un6x")
+passby_press = true
+
+[node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue9/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-10, 61)
+scale = Vector2(1.54081, 1.46473)
+shape = SubResource("CircleShape2D_7un6x")
+passby_press = true
+
+[node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue9/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-82, 40)
+scale = Vector2(1.54081, 1.46473)
+shape = SubResource("CircleShape2D_7un6x")
+passby_press = true
+
+[node name="TouchScreenButton9" type="TouchScreenButton" parent="BlueCards/Blue9/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(75, 103)
+scale = Vector2(1.54081, 1.46473)
+shape = SubResource("CircleShape2D_7un6x")
+passby_press = true
+
+[node name="TouchScreenButton10" type="TouchScreenButton" parent="BlueCards/Blue9/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(75, -89)
+scale = Vector2(1.54081, 1.46473)
+shape = SubResource("CircleShape2D_7un6x")
+passby_press = true
+
+[node name="TouchScreenButton11" type="TouchScreenButton" parent="BlueCards/Blue9/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-74, -91)
+scale = Vector2(1.54081, 1.46473)
+shape = SubResource("CircleShape2D_7un6x")
+passby_press = true
+
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue9/WrongAreas"]
 modulate = Color(1, 0.0470588, 1, 1)
 position = Vector2(205, 7)
@@ -998,101 +1441,121 @@ script = ExtResource("3_1kaoy")
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(-130, -32)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton2" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(-105, -49)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(-88, -18)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton4" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(-86, -55)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(-89, 13)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(-89, 44)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(-89, 93)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(-125, 95)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton9" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(-57, 95)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton10" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(4, 19)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton11" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(13, -26)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton12" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(46, -56)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton13" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(90, -62)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton14" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(128, -41)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton15" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(142, -3)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton16" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(142, 40)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton17" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(124, 81)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton18" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(88, 96)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton19" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(46, 92)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
 [node name="TouchScreenButton20" type="TouchScreenButton" parent="BlueCards/Blue10/CorrectAreas"]
 position = Vector2(16, 61)
+scale = Vector2(1.5, 1.5)
 shape = SubResource("RectangleShape2D_kaljy")
 passby_press = true
 
@@ -1117,6 +1580,41 @@ modulate = Color(1, 0.0470588, 1, 1)
 position = Vector2(-240, 9)
 scale = Vector2(4.88428, 16.5442)
 shape = SubResource("RectangleShape2D_6aag4")
+passby_press = true
+
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="BlueCards/Blue10/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(77, 14)
+scale = Vector2(3.5572, 3.31624)
+shape = SubResource("CircleShape2D_7dguf")
+passby_press = true
+
+[node name="TouchScreenButton7" type="TouchScreenButton" parent="BlueCards/Blue10/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-28, -80)
+scale = Vector2(2.22476, 2.07406)
+shape = SubResource("CircleShape2D_7dguf")
+passby_press = true
+
+[node name="TouchScreenButton8" type="TouchScreenButton" parent="BlueCards/Blue10/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-146, 31)
+scale = Vector2(2.22476, 2.07406)
+shape = SubResource("CircleShape2D_7dguf")
+passby_press = true
+
+[node name="TouchScreenButton9" type="TouchScreenButton" parent="BlueCards/Blue10/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(158, -95)
+scale = Vector2(2.22476, 2.07406)
+shape = SubResource("CircleShape2D_7dguf")
+passby_press = true
+
+[node name="TouchScreenButton10" type="TouchScreenButton" parent="BlueCards/Blue10/WrongAreas"]
+modulate = Color(1, 0.0470588, 1, 1)
+position = Vector2(-151, -95)
+scale = Vector2(2.22476, 2.07406)
+shape = SubResource("CircleShape2D_7dguf")
 passby_press = true
 
 [node name="TouchScreenButton5" type="TouchScreenButton" parent="BlueCards/Blue10/WrongAreas"]
