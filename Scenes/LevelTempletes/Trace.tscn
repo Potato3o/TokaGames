@@ -1,9 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://bus3fsjsx0ecc"]
+[gd_scene load_steps=3 format=3 uid="uid://bus3fsjsx0ecc"]
 
 [ext_resource type="Script" path="res://Scripts/LevelManager.gd" id="1_8ehhq"]
+[ext_resource type="AudioStream" uid="uid://3puey0jbvpyg" path="res://Sounds/CorrectNoise.wav" id="2_p1k1i"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_8ehhq")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(1.8, 1.7)
+zoom = Vector2(2, 1.891)
+
+[node name="Correct" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_p1k1i")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

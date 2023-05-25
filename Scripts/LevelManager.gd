@@ -5,6 +5,10 @@ extends Node
 #0 = blue, 1 = yellow, 2 = red
 @export var cardColor = 0
 @export var cardNumber = 4
+
+@onready var vicNoise = get_node("Correct")
+@onready var timer = get_node("Timer")
+
 #the cards scene
 var cards
 
@@ -21,3 +25,13 @@ func newCard():
 	add_child(card)
 
 
+func victory():
+	vicNoise.play()
+	timer.start()
+
+
+
+
+
+func _on_timer_timeout():
+	newCard()

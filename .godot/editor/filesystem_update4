@@ -1,6 +1,7 @@
 res://default_env.tres
-res://Scenes/LevelTempletes/Trace.tscn
 res://Scenes/Cards/TraceCards.tscn
+res://Scenes/LevelTempletes/Trace.tscn
 res://MainScene.tscn
 res://MainMenu.tscn
+res://Scripts/LevelManager.gd
 res://Scripts/TraceTracker.gd

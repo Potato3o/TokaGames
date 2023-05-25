@@ -1,4 +1,5 @@
 Timer
+AudioStreamPlayer
 Node2D
 Camera2D
 TouchScreenButton
