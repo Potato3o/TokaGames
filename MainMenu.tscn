@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cxc6h13se87nu"]
+[gd_scene load_steps=8 format=3 uid="uid://b60o1uxp5wyuy"]
 
 [ext_resource type="Texture2D" uid="uid://ceeptcbh34lxw" path="res://caterpillarSprites.png" id="1_4jh4k"]
 [ext_resource type="Script" path="res://Scripts/DragButton.gd" id="2_y5tud"]
-[ext_resource type="Script" path="res://games button.gd" id="3_d1ulc"]
+[ext_resource type="Script" path="res://Scripts/games button.gd" id="3_rckly"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v167t"]
 atlas = ExtResource("1_4jh4k")
@@ -31,7 +31,7 @@ script = ExtResource("2_y5tud")
 [node name="games button" type="TouchScreenButton" parent="."]
 position = Vector2(-109, 138)
 texture_normal = SubResource("AtlasTexture_du1la")
-script = ExtResource("3_d1ulc")
+script = ExtResource("3_rckly")
 
 [node name="games menu" type="Camera2D" parent="."]
 position = Vector2(0, 694)
