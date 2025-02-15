@@ -1,0 +1,220 @@
+[gd_scene load_steps=7 format=3 uid="uid://ph1mxqvgbnca"]
+
+[ext_resource type="Script" path="res://Scripts/Game Scripts/ComCards.gd" id="2_2er5i"]
+[ext_resource type="Texture2D" uid="uid://b45xqilnugdfd" path="res://Sprites/RedCards/Red5.png" id="4_psffd"]
+[ext_resource type="Texture2D" uid="uid://dkrig5gq0bl7p" path="res://Sprites/YellowCards/Yellow5.png" id="5_b00sx"]
+[ext_resource type="Texture2D" uid="uid://p2y6mfr73gxe" path="res://Sprites/RedCards/Red10.png" id="5_yjacx"]
+[ext_resource type="Texture2D" uid="uid://bnkyueqjr8y1n" path="res://Sprites/YellowCards/Yellow10.png" id="10_b5i3n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_47jk1"]
+radius = 32.52
+
+[node name="CompositionCards" type="Node2D"]
+
+[node name="YellowCards" type="Node2D" parent="."]
+
+[node name="Yellow5" type="Sprite2D" parent="YellowCards"]
+position = Vector2(590, 884)
+scale = Vector2(0.492, 0.492)
+texture = ExtResource("5_b00sx")
+script = ExtResource("2_2er5i")
+
+[node name="Dot1" type="TouchScreenButton" parent="YellowCards/Yellow5"]
+position = Vector2(-121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot2" type="TouchScreenButton" parent="YellowCards/Yellow5"]
+position = Vector2(121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow5"]
+position = Vector2(-121, -97)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow5"]
+position = Vector2(121, -96.9999)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot5" type="TouchScreenButton" parent="YellowCards/Yellow5"]
+position = Vector2(0, -217)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Yellow10" type="Sprite2D" parent="YellowCards"]
+position = Vector2(1972, 1152)
+scale = Vector2(0.492, 0.492)
+texture = ExtResource("10_b5i3n")
+script = ExtResource("2_2er5i")
+
+[node name="Dot1" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(-121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot2" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(121, -338)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot3" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(-121, -97)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot4" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(121, -97)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot5" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(0, -217)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot6" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(-121, 112)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot7" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(121, 112)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot8" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(-121, 353)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot9" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(121, 353)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot10" type="TouchScreenButton" parent="YellowCards/Yellow10"]
+position = Vector2(0, 233)
+scale = Vector2(1.02481, 1.02681)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="RedCards" type="Node2D" parent="."]
+
+[node name="Red5" type="Sprite2D" parent="RedCards"]
+position = Vector2(590, 1463)
+scale = Vector2(0.492, 0.492)
+texture = ExtResource("4_psffd")
+script = ExtResource("2_2er5i")
+
+[node name="Dot1" type="TouchScreenButton" parent="RedCards/Red5"]
+position = Vector2(-93.496, -371.951)
+scale = Vector2(0.742345, 0.743794)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot2" type="TouchScreenButton" parent="RedCards/Red5"]
+position = Vector2(93.496, -371.951)
+scale = Vector2(0.742, 0.743)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot3" type="TouchScreenButton" parent="RedCards/Red5"]
+position = Vector2(-93.496, -189.024)
+scale = Vector2(0.742, 0.743)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot4" type="TouchScreenButton" parent="RedCards/Red5"]
+position = Vector2(93.496, -184.959)
+scale = Vector2(0.742, 0.743)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot5" type="TouchScreenButton" parent="RedCards/Red5"]
+position = Vector2(0, -278.455)
+scale = Vector2(0.742, 0.743)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Red10" type="Sprite2D" parent="RedCards"]
+position = Vector2(1528, 1248)
+scale = Vector2(0.492, 0.492)
+texture = ExtResource("5_yjacx")
+script = ExtResource("2_2er5i")
+
+[node name="Dot1" type="TouchScreenButton" parent="RedCards/Red10"]
+position = Vector2(-93.4956, -371.951)
+scale = Vector2(0.742, 0.743)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot2" type="TouchScreenButton" parent="RedCards/Red10"]
+position = Vector2(93.4961, -371.951)
+scale = Vector2(0.742, 0.743)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot3" type="TouchScreenButton" parent="RedCards/Red10"]
+position = Vector2(-93.4956, -186.992)
+scale = Vector2(0.742, 0.743)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot4" type="TouchScreenButton" parent="RedCards/Red10"]
+position = Vector2(93.4963, -184.959)
+scale = Vector2(0.742, 0.743)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot5" type="TouchScreenButton" parent="RedCards/Red10"]
+position = Vector2(0.000244141, -278.455)
+scale = Vector2(0.742, 0.743)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot6" type="TouchScreenButton" parent="RedCards/Red10"]
+position = Vector2(-93.4956, -30.488)
+scale = Vector2(0.742, 0.743)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot7" type="TouchScreenButton" parent="RedCards/Red10"]
+position = Vector2(95.5288, -30.488)
+scale = Vector2(0.742, 0.743)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot8" type="TouchScreenButton" parent="RedCards/Red10"]
+position = Vector2(-95.5281, 160.569)
+scale = Vector2(0.742, 0.743)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot9" type="TouchScreenButton" parent="RedCards/Red10"]
+position = Vector2(93.4963, 160.569)
+scale = Vector2(0.742, 0.743)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true
+
+[node name="Dot10" type="TouchScreenButton" parent="RedCards/Red10"]
+position = Vector2(0.000244141, 65.0405)
+scale = Vector2(0.742, 0.743)
+shape = SubResource("CircleShape2D_47jk1")
+passby_press = true

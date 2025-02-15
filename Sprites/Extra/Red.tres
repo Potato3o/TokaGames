@@ -1,0 +1,8 @@
+[gd_resource type="AtlasTexture" load_steps=2 format=3]
+
+[ext_resource type="Texture2D" uid="uid://ceeptcbh34lxw" path="res://Sprites/Extra/caterpillarSprites.png" id="1_kcrqy"]
+
+[resource]
+atlas = ExtResource("1_kcrqy")
+region = Rect2(368, 184, 128, 136)
+margin = Rect2(0, 10, 0, 0)

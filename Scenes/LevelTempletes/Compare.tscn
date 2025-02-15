@@ -1,0 +1,113 @@
+[gd_scene load_steps=17 format=3 uid="uid://q564oadi1dx7"]
+
+[ext_resource type="Script" path="res://Scripts/LevelManager.gd" id="1_fpqda"]
+[ext_resource type="Texture2D" uid="uid://d05tj0swu2ivl" path="res://Sprites/BlueCards/Blue0.png" id="1_n0bmv"]
+[ext_resource type="Texture2D" uid="uid://3a3wlxc1eu5f" path="res://Sprites/BlueCards/Blue1.png" id="2_b8vrr"]
+[ext_resource type="Texture2D" uid="uid://de71ad826p56w" path="res://Sprites/Extra/MathSigns.png" id="3_u7t6y"]
+[ext_resource type="FontFile" uid="uid://cfjq2avyu67sx" path="res://Fonts/ABeeZee-Regular.ttf" id="4_72q32"]
+[ext_resource type="Script" path="res://Scripts/Game Scripts/Compare.gd" id="5_bs5o5"]
+[ext_resource type="Texture2D" uid="uid://ceeptcbh34lxw" path="res://Sprites/Extra/caterpillarSprites.png" id="7_hhaaf"]
+[ext_resource type="AudioStream" uid="uid://3puey0jbvpyg" path="res://Sounds/SFX/CorrectNoise.wav" id="8_kqa6h"]
+[ext_resource type="AudioStream" uid="uid://dyx5b5g6hjvs1" path="res://Sounds/SFX/Wrong.mp3" id="9_tn8ym"]
+
+[sub_resource type="Gradient" id="Gradient_kkel3"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0.921569, 0.54902, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_jtvi0"]
+gradient = SubResource("Gradient_kkel3")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g0op2"]
+atlas = ExtResource("3_u7t6y")
+region = Rect2(246, 45, 426, 141)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qivu4"]
+size = Vector2(425, 150)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_babfs"]
+atlas = ExtResource("3_u7t6y")
+region = Rect2(402, 219, 176, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wlei8"]
+atlas = ExtResource("7_hhaaf")
+region = Rect2(369, 19, 122, 138)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xjvhw"]
+radius = 60.69
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_fpqda")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(-15, 1.90735e-06)
+rotation = 3.14159
+scale = Vector2(24.4229, 31.2855)
+texture = SubResource("GradientTexture2D_jtvi0")
+
+[node name="Pos1" type="Sprite2D" parent="."]
+position = Vector2(8.84886, -584)
+rotation = 1.5708
+scale = Vector2(0.449235, 0.449235)
+texture = ExtResource("1_n0bmv")
+
+[node name="Pos2" type="Sprite2D" parent="."]
+position = Vector2(8.84886, 573)
+rotation = 1.5708
+scale = Vector2(0.449235, 0.449235)
+texture = ExtResource("2_b8vrr")
+
+[node name="AnswerButton" type="TouchScreenButton" parent="."]
+position = Vector2(429, -360)
+rotation = 1.5708
+scale = Vector2(1.68664, 1.68664)
+texture_normal = SubResource("AtlasTexture_g0op2")
+shape = SubResource("RectangleShape2D_qivu4")
+script = ExtResource("5_bs5o5")
+
+[node name="Label" type="Label" parent="AnswerButton"]
+offset_left = 18.9725
+offset_top = 39.7238
+offset_right = 819.973
+offset_bottom = 161.724
+scale = Vector2(0.474174, 0.474174)
+theme_override_fonts/font = ExtResource("4_72q32")
+theme_override_font_sizes/font_size = 100
+text = "is GREATER than"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Symbol" type="Sprite2D" parent="AnswerButton"]
+position = Vector2(203.363, 270.36)
+texture = SubResource("AtlasTexture_babfs")
+
+[node name="SubmitButton" type="TouchScreenButton" parent="."]
+position = Vector2(-240, -116)
+rotation = 1.5708
+scale = Vector2(1.56627, 1.56627)
+texture_normal = SubResource("AtlasTexture_wlei8")
+shape = SubResource("CircleShape2D_xjvhw")
+
+[node name="Label" type="Label" parent="SubmitButton"]
+offset_left = -55.5458
+offset_top = 44.6924
+offset_right = 745.455
+offset_bottom = 166.693
+scale = Vector2(0.288871, 0.288871)
+theme_override_fonts/font = ExtResource("4_72q32")
+theme_override_font_sizes/font_size = 100
+text = "SUBMIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Correct" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_kqa6h")
+
+[node name="Wrong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_tn8ym")
+
+[connection signal="pressed" from="AnswerButton" to="AnswerButton" method="_on_pressed"]
+[connection signal="pressed" from="SubmitButton" to="AnswerButton" method="_on_submit_button_pressed"]
+[connection signal="finished" from="Correct" to="AnswerButton" method="_on_correct_finished"]

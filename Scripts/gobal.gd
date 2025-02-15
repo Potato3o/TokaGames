@@ -2,4 +2,5 @@ extends Node
 
 
 var touched = false
-var selected 
+var selected = Object
+var LevelDetails

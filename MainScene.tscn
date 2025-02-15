@@ -1,47 +1,819 @@
-[gd_scene load_steps=8 format=3 uid="uid://dw0wrkgj7bx3p"]
+[gd_scene load_steps=14 format=3 uid="uid://bnb0qli5a2eim"]
 
-[ext_resource type="Texture2D" uid="uid://ceeptcbh34lxw" path="res://caterpillarSprites.png" id="1_6k4o2"]
-[ext_resource type="Script" path="res://Scripts/DragButton.gd" id="2"]
-[ext_resource type="Script" path="res://games button.gd" id="2_yjjn8"]
+[ext_resource type="Texture2D" uid="uid://ceeptcbh34lxw" path="res://Sprites/Extra/caterpillarSprites.png" id="1_m1bys"]
+[ext_resource type="FontFile" uid="uid://cfjq2avyu67sx" path="res://Fonts/ABeeZee-Regular.ttf" id="2_sfapq"]
+[ext_resource type="Script" path="res://Scripts/MenuButtons.gd" id="2_uf55p"]
+[ext_resource type="Texture2D" path="res://Sprites/Extra/Blue.tres" id="3_ed0mu"]
+[ext_resource type="Texture2D" path="res://Sprites/Extra/Yellow.tres" id="5_5ni6k"]
+[ext_resource type="Texture2D" path="res://Sprites/Extra/Red.tres" id="6_v70i6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v167t"]
-atlas = ExtResource("1_6k4o2")
+atlas = ExtResource("1_m1bys")
 region = Rect2(54.025, 37.2715, 221.296, 120.893)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hytps"]
-atlas = ExtResource("1_6k4o2")
+atlas = ExtResource("1_m1bys")
 region = Rect2(50.079, 213.776, 225.277, 123.671)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_du1la"]
 atlas = SubResource("AtlasTexture_hytps")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jcg17"]
-atlas = ExtResource("1_6k4o2")
+atlas = ExtResource("1_m1bys")
 region = Rect2(368.391, 344.942, 124.009, 148.811)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1v1uu"]
+radius = 55.62
+
+[sub_resource type="Gradient" id="Gradient_gl1sj"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.909804, 0.560784, 0.905882, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_bs0n1"]
+gradient = SubResource("Gradient_gl1sj")
 
 [node name="Node2D" type="Node2D"]
 
 [node name="main menu" type="Camera2D" parent="."]
 
-[node name="Levels button" type="TouchScreenButton" parent="."]
-position = Vector2(-104, -65)
+[node name="Levels button" type="TouchScreenButton" parent="." node_paths=PackedStringArray("newCam")]
+position = Vector2(-211, -122)
+scale = Vector2(2, 2)
 texture_normal = SubResource("AtlasTexture_v167t")
-script = ExtResource("2")
+script = ExtResource("2_uf55p")
+newCam = NodePath("../levels menu")
 
 [node name="games button" type="TouchScreenButton" parent="."]
-position = Vector2(-109, 138)
+position = Vector2(-211, 227)
+scale = Vector2(2, 2)
 texture_normal = SubResource("AtlasTexture_du1la")
-script = ExtResource("2_yjjn8")
 
 [node name="games menu" type="Camera2D" parent="."]
-position = Vector2(0, 694)
+position = Vector2(-1537, 0)
 
 [node name="levels menu" type="Camera2D" parent="."]
-position = Vector2(1588, -6)
+position = Vector2(1588, 0)
 
-[node name="Smiley" type="Sprite2D" parent="." groups=["caterpillar"]]
-position = Vector2(-334, -201)
+[node name="TraceCat" type="Sprite2D" parent="." groups=["caterpillar"]]
+z_index = 6
+position = Vector2(1168, -724)
+scale = Vector2(1.49418, 1.49418)
 texture = SubResource("AtlasTexture_jcg17")
 
-[connection signal="pressed" from="Levels button" to="Levels button" method="_on_pressed"]
-[connection signal="pressed" from="games button" to="games button" method="_on_pressed"]
+[node name="Level1" type="TouchScreenButton" parent="TraceCat"]
+z_index = 5
+z_as_relative = false
+position = Vector2(41, -74)
+texture_normal = ExtResource("3_ed0mu")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "res://Scenes/Cards/TraceCards.tscn",
+"Color": 0,
+"Color2": -1,
+"GameType": "Trace",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="TraceCat/Level1"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "1"
+horizontal_alignment = 1
+
+[node name="Level2" type="TouchScreenButton" parent="TraceCat"]
+z_index = 4
+z_as_relative = false
+position = Vector2(135.315, -74)
+texture_normal = ExtResource("3_ed0mu")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "res://Scenes/Cards/TraceCards.tscn",
+"Color": 0,
+"Color2": -1,
+"GameType": "Trace",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="TraceCat/Level2"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "2
+"
+horizontal_alignment = 1
+
+[node name="Level3" type="TouchScreenButton" parent="TraceCat"]
+z_index = 3
+z_as_relative = false
+position = Vector2(227.633, -74)
+texture_normal = ExtResource("5_5ni6k")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "res://Scenes/Cards/TraceCards.tscn",
+"Color": 1,
+"Color2": -1,
+"GameType": "Trace",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="TraceCat/Level3"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "3
+"
+horizontal_alignment = 1
+
+[node name="Level4" type="TouchScreenButton" parent="TraceCat"]
+z_index = 2
+z_as_relative = false
+position = Vector2(319.908, -74)
+texture_normal = ExtResource("5_5ni6k")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "res://Scenes/Cards/TraceCards.tscn",
+"Color": 1,
+"Color2": -1,
+"GameType": "Trace",
+"Random": true
+}
+
+[node name="Number" type="Label" parent="TraceCat/Level4"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "4"
+horizontal_alignment = 1
+
+[node name="Level5" type="TouchScreenButton" parent="TraceCat"]
+z_index = 1
+z_as_relative = false
+position = Vector2(411.637, -74)
+texture_normal = ExtResource("6_v70i6")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "res://Scenes/Cards/TraceCards.tscn",
+"Color": 2,
+"Color2": -1,
+"GameType": "Trace",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="TraceCat/Level5"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "5
+"
+horizontal_alignment = 1
+
+[node name="Level6" type="TouchScreenButton" parent="TraceCat"]
+z_as_relative = false
+position = Vector2(502.617, -74.2882)
+texture_normal = ExtResource("6_v70i6")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "res://Scenes/Cards/TraceCards.tscn",
+"Color": 2,
+"Color2": -1,
+"GameType": "Trace",
+"Random": true
+}
+
+[node name="Number" type="Label" parent="TraceCat/Level6"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "6
+"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="TraceCat"]
+offset_left = -14.7239
+offset_top = -145.9
+offset_right = 581.276
+offset_bottom = -53.8997
+scale = Vector2(0.965629, 0.965629)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 60
+text = "Tracing Numbers"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DragCat" type="Sprite2D" parent="." groups=["caterpillar"]]
+z_index = 6
+position = Vector2(1168, -322)
+scale = Vector2(1.49418, 1.49418)
+texture = SubResource("AtlasTexture_jcg17")
+
+[node name="Level1" type="TouchScreenButton" parent="DragCat"]
+z_index = 5
+z_as_relative = false
+position = Vector2(41, -74)
+texture_normal = ExtResource("3_ed0mu")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "e",
+"Color": 0,
+"Color2": 0,
+"GameType": "Drag",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="DragCat/Level1"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "1"
+horizontal_alignment = 1
+
+[node name="Level2" type="TouchScreenButton" parent="DragCat"]
+z_index = 4
+z_as_relative = false
+position = Vector2(135.315, -74)
+texture_normal = ExtResource("5_5ni6k")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "e",
+"Color": 1,
+"Color2": 1,
+"GameType": "Drag",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="DragCat/Level2"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "2
+"
+horizontal_alignment = 1
+
+[node name="Level3" type="TouchScreenButton" parent="DragCat"]
+z_index = 3
+z_as_relative = false
+position = Vector2(227.633, -74)
+texture_normal = ExtResource("6_v70i6")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "e",
+"Color": 2,
+"Color2": 2,
+"GameType": "Drag",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="DragCat/Level3"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "3
+"
+horizontal_alignment = 1
+
+[node name="Level4" type="TouchScreenButton" parent="DragCat"]
+z_index = 2
+z_as_relative = false
+position = Vector2(319.908, -74)
+texture_normal = ExtResource("3_ed0mu")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "e",
+"Color": 0,
+"Color2": 2,
+"GameType": "Drag",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="DragCat/Level4"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "4"
+horizontal_alignment = 1
+
+[node name="Level5" type="TouchScreenButton" parent="DragCat"]
+z_index = 1
+z_as_relative = false
+position = Vector2(411.637, -74)
+texture_normal = ExtResource("6_v70i6")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "e",
+"Color": 1,
+"Color2": 2,
+"GameType": "Drag",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="DragCat/Level5"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "5
+"
+horizontal_alignment = 1
+
+[node name="Level6" type="TouchScreenButton" parent="DragCat"]
+z_as_relative = false
+position = Vector2(502.69, -74)
+texture_normal = ExtResource("5_5ni6k")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "e",
+"Color": 1,
+"Color2": 0,
+"GameType": "Drag",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="DragCat/Level6"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "6
+"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="DragCat"]
+offset_left = -14.7239
+offset_top = -145.9
+offset_right = 581.276
+offset_bottom = -53.8997
+scale = Vector2(0.965629, 0.965629)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 60
+text = "Matching Numbers"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CompareCat" type="Sprite2D" parent="." groups=["caterpillar"]]
+z_index = 6
+position = Vector2(1168, 80)
+scale = Vector2(1.49418, 1.49418)
+texture = SubResource("AtlasTexture_jcg17")
+
+[node name="Level1" type="TouchScreenButton" parent="CompareCat"]
+z_index = 5
+z_as_relative = false
+position = Vector2(41, -74)
+texture_normal = ExtResource("5_5ni6k")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "e",
+"Color": 1,
+"Color2": 1,
+"GameType": "Compare",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="CompareCat/Level1"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "1"
+horizontal_alignment = 1
+
+[node name="Level2" type="TouchScreenButton" parent="CompareCat"]
+z_index = 4
+z_as_relative = false
+position = Vector2(135.315, -74)
+texture_normal = ExtResource("5_5ni6k")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "e",
+"Color": 1,
+"Color2": 2,
+"GameType": "Compare",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="CompareCat/Level2"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "2
+"
+horizontal_alignment = 1
+
+[node name="Level3" type="TouchScreenButton" parent="CompareCat"]
+z_index = 3
+z_as_relative = false
+position = Vector2(227.633, -74)
+texture_normal = ExtResource("6_v70i6")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "e",
+"Color": 2,
+"Color2": 2,
+"GameType": "Compare",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="CompareCat/Level3"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "3
+"
+horizontal_alignment = 1
+
+[node name="Level4" type="TouchScreenButton" parent="CompareCat"]
+z_index = 2
+z_as_relative = false
+position = Vector2(319.908, -74)
+texture_normal = ExtResource("6_v70i6")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "e",
+"Color": 2,
+"Color2": 0,
+"GameType": "Compare",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="CompareCat/Level4"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "4"
+horizontal_alignment = 1
+
+[node name="Level5" type="TouchScreenButton" parent="CompareCat"]
+z_index = 1
+z_as_relative = false
+position = Vector2(411.637, -74)
+texture_normal = ExtResource("3_ed0mu")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "e",
+"Color": 0,
+"Color2": 2,
+"GameType": "Compare",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="CompareCat/Level5"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "5
+"
+horizontal_alignment = 1
+
+[node name="Level6" type="TouchScreenButton" parent="CompareCat"]
+z_as_relative = false
+position = Vector2(502.69, -74)
+texture_normal = ExtResource("3_ed0mu")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "e",
+"Color": 0,
+"Color2": 0,
+"GameType": "Compare",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="CompareCat/Level6"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "6
+"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="CompareCat"]
+offset_left = -14.7239
+offset_top = -145.9
+offset_right = 581.276
+offset_bottom = -53.8997
+scale = Vector2(0.965629, 0.965629)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 60
+text = "Comparing Numbers"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CompCat" type="Sprite2D" parent="." groups=["caterpillar"]]
+z_index = 6
+position = Vector2(1168, 468)
+scale = Vector2(1.49418, 1.49418)
+texture = SubResource("AtlasTexture_jcg17")
+
+[node name="Level1" type="TouchScreenButton" parent="CompCat"]
+z_index = 5
+z_as_relative = false
+position = Vector2(41, -74)
+texture_normal = ExtResource("5_5ni6k")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "res://Scenes/Cards/CompositionCards.tscn",
+"Color": 1,
+"Color2": -1,
+"GameType": "Comp",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="CompCat/Level1"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "1"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Level2" type="TouchScreenButton" parent="CompCat"]
+z_index = 4
+z_as_relative = false
+position = Vector2(135.315, -74)
+texture_normal = ExtResource("5_5ni6k")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "res://Scenes/Cards/CompositionCards.tscn",
+"Color": 1,
+"Color2": -1,
+"GameType": "Comp",
+"Random": true
+}
+
+[node name="Number" type="Label" parent="CompCat/Level2"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "2
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Level3" type="TouchScreenButton" parent="CompCat"]
+z_index = 3
+z_as_relative = false
+position = Vector2(227.633, -74)
+texture_normal = ExtResource("6_v70i6")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "res://Scenes/Cards/CompositionCards.tscn",
+"Color": 2,
+"Color2": -1,
+"GameType": "Comp",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="CompCat/Level3"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "3
+"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Level4" type="TouchScreenButton" parent="CompCat"]
+z_index = 2
+z_as_relative = false
+position = Vector2(319.908, -74)
+texture_normal = ExtResource("6_v70i6")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "res://Scenes/Cards/CompositionCards.tscn",
+"Color": 2,
+"Color2": -1,
+"GameType": "Comp",
+"Random": true
+}
+
+[node name="Number" type="Label" parent="CompCat/Level4"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "4"
+horizontal_alignment = 1
+
+[node name="Level5" type="TouchScreenButton" parent="CompCat"]
+z_index = 1
+z_as_relative = false
+position = Vector2(411.637, -74)
+texture_normal = ExtResource("3_ed0mu")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "res://Scenes/Cards/CompositionCards.tscn",
+"Color": 0,
+"Color2": -1,
+"GameType": "Comp",
+"Random": false
+}
+
+[node name="Number" type="Label" parent="CompCat/Level5"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "5
+"
+horizontal_alignment = 1
+
+[node name="Level6" type="TouchScreenButton" parent="CompCat"]
+z_as_relative = false
+position = Vector2(502.69, -74)
+texture_normal = ExtResource("3_ed0mu")
+shape = SubResource("CircleShape2D_1v1uu")
+script = ExtResource("2_uf55p")
+IsLevel = true
+LevelFacts = {
+"CardDeck": "res://Scenes/Cards/CompositionCards.tscn",
+"Color": 0,
+"Color2": -1,
+"GameType": "Comp",
+"Random": true
+}
+
+[node name="Number" type="Label" parent="CompCat/Level6"]
+offset_left = 44.3626
+offset_top = 10.7685
+offset_right = 104.363
+offset_bottom = 132.768
+scale = Vector2(0.584041, 1.11504)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 100
+text = "6
+"
+horizontal_alignment = 1
+
+[node name="Title" type="Label" parent="CompCat"]
+offset_left = -16.7317
+offset_top = -145.899
+offset_right = 579.268
+offset_bottom = -53.8991
+scale = Vector2(0.965629, 0.965629)
+theme_override_fonts/font = ExtResource("2_sfapq")
+theme_override_font_sizes/font_size = 60
+text = "Number Composition"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -2
+scale = Vector2(67.96, 32.8)
+texture = SubResource("GradientTexture2D_bs0n1")

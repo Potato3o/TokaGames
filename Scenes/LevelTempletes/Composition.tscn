@@ -1,0 +1,119 @@
+[gd_scene load_steps=9 format=3 uid="uid://m0yrnkuforh1"]
+
+[ext_resource type="Script" path="res://Scripts/LevelManager2.gd" id="1_2yfq6"]
+[ext_resource type="AudioStream" uid="uid://3puey0jbvpyg" path="res://Sounds/SFX/CorrectNoise.wav" id="2_ub6t0"]
+[ext_resource type="Texture2D" uid="uid://btqepvbip7u0x" path="res://Sprites/BlueCards/Blue3.png" id="3_nlyxw"]
+[ext_resource type="AudioStream" uid="uid://cakmvgnxl4i4n" path="res://Sounds/SFX/ButtonClickNoise.mp3" id="4_8m4b8"]
+[ext_resource type="Script" path="res://Scripts/Game Scripts/Q&A.gd" id="4_dc8ei"]
+[ext_resource type="FontFile" uid="uid://cfjq2avyu67sx" path="res://Fonts/ABeeZee-Regular.ttf" id="4_rvco7"]
+
+[sub_resource type="Gradient" id="Gradient_ncyhv"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.537255, 0.184314, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_tus15"]
+gradient = SubResource("Gradient_ncyhv")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2yfq6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 1.891)
+
+[node name="Correct" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ub6t0")
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_8m4b8")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(3.99998, -1.00003)
+scale = Vector2(10.1875, 17.4688)
+texture = SubResource("GradientTexture2D_tus15")
+
+[node name="Pos1" type="Sprite2D" parent="."]
+position = Vector2(3, -236)
+scale = Vector2(0.492364, 0.492364)
+texture = ExtResource("3_nlyxw")
+
+[node name="QA" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -120.0
+offset_top = 288.0
+offset_right = -80.0
+offset_bottom = 328.0
+rotation = -1.5708
+script = ExtResource("4_dc8ei")
+
+[node name="LineEdit" type="LineEdit" parent="QA"]
+layout_mode = 0
+offset_left = 159.039
+offset_top = 0.918716
+offset_right = 286.039
+offset_bottom = 38.9187
+rotation = 1.5708
+scale = Vector2(1.87672, 2.77878)
+theme_override_fonts/font = ExtResource("4_rvco7")
+theme_override_font_sizes/font_size = 25
+placeholder_text = "Answer.."
+
+[node name="Question" type="Label" parent="QA"]
+layout_mode = 0
+offset_left = 252.0
+offset_top = -130.599
+offset_right = 1785.0
+offset_bottom = -8.59892
+rotation = 1.5708
+scale = Vector2(0.327555, 0.66894)
+theme_override_fonts/font = ExtResource("4_rvco7")
+theme_override_font_sizes/font_size = 100
+text = "what is the number on this card?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Correct" type="Label" parent="QA"]
+visible = false
+z_index = -1
+layout_mode = 0
+offset_left = 152.985
+offset_top = -213.645
+offset_right = 1685.98
+offset_bottom = -91.6453
+rotation = 1.5708
+scale = Vector2(0.431276, 0.539245)
+theme_override_colors/font_color = Color(0, 0.996078, 0, 1)
+theme_override_fonts/font = ExtResource("4_rvco7")
+theme_override_font_sizes/font_size = 100
+text = "Correct!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Equation" type="Label" parent="QA"]
+visible = false
+z_index = -1
+layout_mode = 0
+offset_left = 3.32373
+offset_top = -326.754
+offset_right = 1536.32
+offset_bottom = -204.754
+rotation = 1.5708
+scale = Vector2(0.569595, 0.712191)
+theme_override_colors/font_color = Color(0, 0.894118, 1, 1)
+theme_override_fonts/font = ExtResource("4_rvco7")
+theme_override_font_sizes/font_size = 100
+text = "0 + 5 = 5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Delay" type="Timer" parent="QA"]
+wait_time = 1.5
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="text_submitted" from="QA/LineEdit" to="QA" method="_on_line_edit_text_submitted"]
+[connection signal="timeout" from="QA/Delay" to="QA" method="_on_delay_timeout"]

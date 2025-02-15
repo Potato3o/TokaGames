@@ -1,19 +1,184 @@
-[gd_scene load_steps=3 format=3 uid="uid://uavvjji3d0xd"]
+[gd_scene load_steps=17 format=3 uid="uid://dyrix00xwqtih"]
 
-[ext_resource type="Texture2D" uid="uid://c7ar11yuh1qvw" path="res://icon.png" id="1_y52hk"]
-[ext_resource type="Script" path="res://Scripts/Drag'n'Drop.gd" id="2_eql7s"]
+[ext_resource type="Texture2D" uid="uid://3a3wlxc1eu5f" path="res://Sprites/BlueCards/Blue1.png" id="1_jep57"]
+[ext_resource type="Script" path="res://Scripts/LevelManager.gd" id="1_ovu22"]
+[ext_resource type="Texture2D" uid="uid://5utjgyusn4wa" path="res://Sprites/RedCards/Red1.png" id="3_0ijcq"]
+[ext_resource type="Script" path="res://Scripts/Game Scripts/Drag'n'Drop.gd" id="3_5oryd"]
+[ext_resource type="Texture2D" uid="uid://c7xs3nht3dv28" path="res://Sprites/BlueCards/Blue6.png" id="3_6ms7w"]
+[ext_resource type="Texture2D" uid="uid://df4q0u6ejlqdx" path="res://Sprites/BlueCards/Blue4.png" id="4_swal1"]
+[ext_resource type="Texture2D" uid="uid://dxscqaqj3pdnm" path="res://Sprites/BlueCards/Blue9.png" id="5_cwstd"]
+[ext_resource type="Texture2D" uid="uid://b7rnx2dxljsa8" path="res://Sprites/BlueCards/Blue7.png" id="6_3d51f"]
+[ext_resource type="Texture2D" uid="uid://cfj8rs2a0xu6h" path="res://Sprites/RedCards/Red9.png" id="8_tcexi"]
+[ext_resource type="Texture2D" uid="uid://ci6a1kqa54bch" path="res://Sprites/RedCards/Red7.png" id="9_a4i6e"]
+[ext_resource type="Texture2D" uid="uid://ddoea22kmx5nb" path="res://Sprites/RedCards/Red6.png" id="10_v36sh"]
+[ext_resource type="Texture2D" uid="uid://dxs52mclikomb" path="res://Sprites/RedCards/Red4.png" id="11_5cl30"]
+[ext_resource type="AudioStream" uid="uid://3puey0jbvpyg" path="res://Sounds/SFX/CorrectNoise.wav" id="13_hyct1"]
+[ext_resource type="AudioStream" uid="uid://cakmvgnxl4i4n" path="res://Sounds/SFX/ButtonClickNoise.mp3" id="14_qt34u"]
+
+[sub_resource type="Gradient" id="Gradient_u1hlf"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.937255, 0.67451, 0.290196, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_158r4"]
+gradient = SubResource("Gradient_u1hlf")
 
 [node name="Node2D" type="Node2D"]
-
-[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-position = Vector2(-445, -212)
-texture_normal = ExtResource("1_y52hk")
-script = ExtResource("2_eql7s")
-
-[node name="WaitTime" type="Timer" parent="TouchScreenButton"]
+script = ExtResource("1_ovu22")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[connection signal="pressed" from="TouchScreenButton" to="TouchScreenButton" method="_on_pressed"]
-[connection signal="released" from="TouchScreenButton" to="TouchScreenButton" method="_on_released"]
-[connection signal="timeout" from="TouchScreenButton/WaitTime" to="TouchScreenButton" method="_on_wait_time_timeout"]
+[node name="Moveable" type="Node2D" parent="."]
+
+[node name="Move1" type="TouchScreenButton" parent="Moveable"]
+z_index = 2
+position = Vector2(-473, -896)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("1_jep57")
+script = ExtResource("3_5oryd")
+value = 1
+
+[node name="Move2" type="TouchScreenButton" parent="Moveable"]
+z_index = 2
+position = Vector2(-473, -541)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_6ms7w")
+script = ExtResource("3_5oryd")
+value = 6
+
+[node name="Move3" type="TouchScreenButton" parent="Moveable"]
+z_index = 2
+position = Vector2(-473, -158)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("4_swal1")
+script = ExtResource("3_5oryd")
+value = 4
+
+[node name="Move4" type="TouchScreenButton" parent="Moveable"]
+z_index = 2
+position = Vector2(-473, 208)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("5_cwstd")
+script = ExtResource("3_5oryd")
+value = 9
+
+[node name="Move5" type="TouchScreenButton" parent="Moveable"]
+z_index = 2
+position = Vector2(-473, 597)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("6_3d51f")
+script = ExtResource("3_5oryd")
+value = 7
+
+[node name="Recivers" type="Node2D" parent="."]
+
+[node name="End1" type="TouchScreenButton" parent="Recivers"]
+z_index = 1
+position = Vector2(306, -896)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("3_0ijcq")
+passby_press = true
+script = ExtResource("3_5oryd")
+value = 1
+moveable = false
+
+[node name="Delay" type="Timer" parent="Recivers/End1"]
+wait_time = 0.001
+one_shot = true
+
+[node name="End2" type="TouchScreenButton" parent="Recivers"]
+z_index = 1
+position = Vector2(306, -541)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("8_tcexi")
+passby_press = true
+script = ExtResource("3_5oryd")
+value = 9
+moveable = false
+
+[node name="Delay" type="Timer" parent="Recivers/End2"]
+wait_time = 0.001
+one_shot = true
+
+[node name="End3" type="TouchScreenButton" parent="Recivers"]
+z_index = 1
+position = Vector2(306, -158)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("9_a4i6e")
+passby_press = true
+script = ExtResource("3_5oryd")
+value = 7
+moveable = false
+
+[node name="Delay" type="Timer" parent="Recivers/End3"]
+wait_time = 0.001
+one_shot = true
+
+[node name="End4" type="TouchScreenButton" parent="Recivers"]
+z_index = 1
+position = Vector2(306, 208)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("10_v36sh")
+passby_press = true
+script = ExtResource("3_5oryd")
+value = 6
+moveable = false
+
+[node name="Delay" type="Timer" parent="Recivers/End4"]
+wait_time = 0.001
+one_shot = true
+
+[node name="End5" type="TouchScreenButton" parent="Recivers"]
+z_index = 1
+position = Vector2(306, 597)
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("11_5cl30")
+passby_press = true
+script = ExtResource("3_5oryd")
+value = 4
+moveable = false
+
+[node name="Delay" type="Timer" parent="Recivers/End5"]
+wait_time = 0.001
+one_shot = true
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(-15, 1.90735e-06)
+rotation = 3.14159
+scale = Vector2(24.4229, 31.2855)
+texture = SubResource("GradientTexture2D_158r4")
+
+[node name="Correct" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_hyct1")
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_qt34u")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="pressed" from="Moveable/Move1" to="Moveable/Move1" method="_on_pressed"]
+[connection signal="released" from="Moveable/Move1" to="Moveable/Move1" method="_on_released"]
+[connection signal="pressed" from="Moveable/Move2" to="Moveable/Move2" method="_on_pressed"]
+[connection signal="released" from="Moveable/Move2" to="Moveable/Move2" method="_on_released"]
+[connection signal="pressed" from="Moveable/Move3" to="Moveable/Move3" method="_on_pressed"]
+[connection signal="released" from="Moveable/Move3" to="Moveable/Move3" method="_on_released"]
+[connection signal="pressed" from="Moveable/Move4" to="Moveable/Move4" method="_on_pressed"]
+[connection signal="released" from="Moveable/Move4" to="Moveable/Move4" method="_on_released"]
+[connection signal="pressed" from="Moveable/Move5" to="Moveable/Move5" method="_on_pressed"]
+[connection signal="released" from="Moveable/Move5" to="Moveable/Move5" method="_on_released"]
+[connection signal="pressed" from="Recivers/End1" to="Recivers/End1" method="_on_pressed"]
+[connection signal="released" from="Recivers/End1" to="Recivers/End1" method="_on_released"]
+[connection signal="timeout" from="Recivers/End1/Delay" to="Recivers/End1" method="_on_delay_timeout"]
+[connection signal="pressed" from="Recivers/End2" to="Recivers/End2" method="_on_pressed"]
+[connection signal="released" from="Recivers/End2" to="Recivers/End2" method="_on_released"]
+[connection signal="timeout" from="Recivers/End2/Delay" to="Recivers/End2" method="_on_delay_timeout"]
+[connection signal="pressed" from="Recivers/End3" to="Recivers/End3" method="_on_pressed"]
+[connection signal="released" from="Recivers/End3" to="Recivers/End3" method="_on_released"]
+[connection signal="timeout" from="Recivers/End3/Delay" to="Recivers/End3" method="_on_delay_timeout"]
+[connection signal="pressed" from="Recivers/End4" to="Recivers/End4" method="_on_pressed"]
+[connection signal="released" from="Recivers/End4" to="Recivers/End4" method="_on_released"]
+[connection signal="timeout" from="Recivers/End4/Delay" to="Recivers/End4" method="_on_delay_timeout"]
+[connection signal="pressed" from="Recivers/End5" to="Recivers/End5" method="_on_pressed"]
+[connection signal="released" from="Recivers/End5" to="Recivers/End5" method="_on_released"]
+[connection signal="timeout" from="Recivers/End5/Delay" to="Recivers/End5" method="_on_delay_timeout"]
+[connection signal="finished" from="Correct" to="." method="_on_correct_finished"]

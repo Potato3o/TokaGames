@@ -1,43 +1,42 @@
-2a60927148abd1d33b818b535e306557
-::res://::1684931347
-Blue1.gd::GDScript::-1::1684845960::0::1::::<>Sprite2D<>::
-Blue1Button.gd::GDScript::-1::1684845960::0::1::::<>TouchScreenButton<>::
-caterpillarSprites.png::CompressedTexture2D::5062799044878384152::1684845426::1684845426::1::::<><>::
-default_env.tres::Environment::9030448697785243852::1684930754::0::1::::<><>::
-DragAndDrop.gd::GDScript::-1::1684845960::0::1::::<>Node2D<>::
-DragAndDrop.tscn::PackedScene::7929761603837697082::1684846020::0::1::::<><>::res://DragAndDrop.gd<>uid://bqbw4u8nngd2q<>uid://3a3wlxc1eu5f<>uid://bf0s8f4po5rcp<>res://Blue1.gd<>uid://k751ebyfjgtx<>res://Yellow2.gd
-export_presets.cfg::TextFile::-1::1684324517::0::1::::<><>::
-games button.gd::GDScript::-1::1684845426::0::1::::<>TouchScreenButton<>::
+bdbec74c6e5bd72edee867077d70896c
+::res://::1716945112
+default_env.tres::Environment::9030448697785243852::1710948819::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1710948699::0::1::::<><>::
 icon.png::CompressedTexture2D::7019964386923309280::1684845426::1684845426::1::::<><>::
-MainMenu.tscn::PackedScene::6393209663588306006::1684930754::0::1::::<><>::uid://ceeptcbh34lxw<>res://Scripts/DragButton.gd<>res://games button.gd
-MainScene.tscn::PackedScene::8756392722258831819::1684930754::0::1::::<><>::uid://ceeptcbh34lxw<>res://Scripts/DragButton.gd<>res://games button.gd
-Yellow2.gd::GDScript::-1::1684845960::0::1::::<>Sprite2D<>::
+MainScene.tscn::PackedScene::3302487117742637508::1710948623::0::1::::<><>::uid://ceeptcbh34lxw<>uid://cfjq2avyu67sx<>res://Scripts/MenuButtons.gd<>res://Sprites/Extra/Blue.tres<>res://Sprites/Extra/Yellow.tres<>res://Sprites/Extra/Red.tres
 ::res://android/::1684238958
 ::res://android/plugins/::1684238958
-::res://caterpillar/::1684845426
-blueCircle.png::CompressedTexture2D::8272379172121210811::1684845426::1684845426::1::::<><>::
-redCircle.png::CompressedTexture2D::8316508055876530526::1684845426::1684845426::1::::<><>::
-smileyCircle.png::CompressedTexture2D::3844731806096803773::1684845426::1684845426::1::::<><>::
-yellowCircle.png::CompressedTexture2D::2370235603657777215::1684845426::1684845426::1::::<><>::
 ::res://Fonts/::1682684896
 ABeeZee-Italic.ttf::FontFile::6814171413732429331::1682640826::1682684896::1::::<><>::
 ABeeZee-Regular.ttf::FontFile::5143384707241923315::1682640830::1682684896::1::::<><>::
 ::res://Scenes/::1682999820
-::res://Scenes/Cards/::1684930754
-TraceCards.tscn::PackedScene::5321165254296624456::1684930754::0::1::::<><>::uid://d05tj0swu2ivl<>res://Scripts/TraceTracker.gd<>uid://3a3wlxc1eu5f<>res://Scripts/FillDot.gd<>uid://k751ebyfjgtx<>uid://btqepvbip7u0x<>uid://df4q0u6ejlqdx<>uid://be7tglf8e3c1w<>uid://c7xs3nht3dv28<>uid://b7rnx2dxljsa8<>uid://dsbttnht56ng0<>uid://dxscqaqj3pdnm<>uid://cughhfh4fpq0n<>uid://kw0qoge4gdcb<>uid://c6m1trmvnokwb<>uid://diyjkrfjgkk5m<>uid://hol11jc0j47<>uid://if1cnqsfoupn<>uid://dkrig5gq0bl7p<>uid://blwqcs2pgmbti<>uid://fnka7tvfh12k<>uid://bf0s8f4po5rcp<>uid://bqbw4u8nngd2q
-::res://Scenes/LevelTempletes/::1684930754
-Drag'n'Drop.tscn::PackedScene::1405089918295185677::1683290934::0::1::::<><>::uid://c7ar11yuh1qvw<>res://Scripts/Drag'n'Drop.gd
-Trace.tscn::PackedScene::3829066320966913166::1684930754::0::1::::<><>::res://Scripts/LevelManager.gd
-::res://Scripts/::1684847095
-Drag'n'Drop.gd::GDScript::-1::1682956284::0::1::::<>TouchScreenButton<>::
-DragButton.gd::GDScript::-1::1684845426::0::1::::<>TouchScreenButton<>::
-FillDot.gd::GDScript::-1::1684846020::0::1::::<>Node2D<>::
-gobal.gd::GDScript::-1::1684845960::0::1::::<>Node<>::
-LevelManager.gd::GDScript::-1::1684846020::0::1::::<>Node<>::
-TraceTracker.gd::GDScript::-1::1684847095::0::1::::<>Node2D<>::
-::res://Sounds/::1684931357
-CorrectNoise.wav::AudioStreamWAV::1997476070798364810::1684931357::1684931396::1::::<><>::
-::res://Sprites/::1684845426
+::res://Scenes/Cards/::1706153606
+CompositionCards.tscn::PackedScene::1068884603903831296::1706153606::0::1::::<><>::res://Scripts/Game Scripts/ComCards.gd<>uid://b45xqilnugdfd<>uid://dkrig5gq0bl7p<>uid://p2y6mfr73gxe<>uid://bnkyueqjr8y1n
+TraceCards.tscn::PackedScene::-1::1689992223::0::1::::<><>::uid://d05tj0swu2ivl<>res://Scripts/Game Scripts/TraceTracker.gd<>uid://3a3wlxc1eu5f<>res://Scripts/Game Scripts/FillDot.gd<>uid://k751ebyfjgtx<>uid://btqepvbip7u0x<>uid://df4q0u6ejlqdx<>uid://be7tglf8e3c1w<>uid://c7xs3nht3dv28<>uid://b7rnx2dxljsa8<>uid://dsbttnht56ng0<>uid://dxscqaqj3pdnm<>uid://cughhfh4fpq0n<>uid://kw0qoge4gdcb<>uid://c6m1trmvnokwb<>uid://diyjkrfjgkk5m<>uid://hol11jc0j47<>uid://if1cnqsfoupn<>uid://dkrig5gq0bl7p<>uid://blwqcs2pgmbti<>uid://fnka7tvfh12k<>uid://bf0s8f4po5rcp<>uid://bqbw4u8nngd2q<>uid://dyqx778gi7unf<>uid://5utjgyusn4wa<>uid://peoow57jt7yy<>uid://c8k20nk56gqx0<>uid://dxs52mclikomb<>uid://b45xqilnugdfd<>uid://ddoea22kmx5nb<>uid://ci6a1kqa54bch<>uid://bxrij0hm3aq1b<>uid://cfj8rs2a0xu6h<>uid://p2y6mfr73gxe
+::res://Scenes/LevelTempletes/::1710948819
+Compare.tscn::PackedScene::1186887581104238954::1710948623::0::1::::<><>::res://Scripts/LevelManager.gd<>uid://d05tj0swu2ivl<>uid://3a3wlxc1eu5f<>uid://de71ad826p56w<>uid://cfjq2avyu67sx<>res://Scripts/Game Scripts/Compare.gd<>uid://ceeptcbh34lxw<>uid://3puey0jbvpyg<>uid://dyx5b5g6hjvs1
+Composition.tscn::PackedScene::895363832998217740::1710948819::0::1::::<><>::res://Scripts/LevelManager2.gd<>uid://3puey0jbvpyg<>uid://btqepvbip7u0x<>uid://cakmvgnxl4i4n<>res://Scripts/Game Scripts/Q&A.gd<>uid://cfjq2avyu67sx
+Drag'n'Drop.tscn::PackedScene::8879416882191970147::1710948623::0::1::::<><>::uid://3a3wlxc1eu5f<>res://Scripts/LevelManager.gd<>uid://5utjgyusn4wa<>res://Scripts/Game Scripts/Drag'n'Drop.gd<>uid://c7xs3nht3dv28<>uid://df4q0u6ejlqdx<>uid://dxscqaqj3pdnm<>uid://b7rnx2dxljsa8<>uid://cfj8rs2a0xu6h<>uid://ci6a1kqa54bch<>uid://ddoea22kmx5nb<>uid://dxs52mclikomb<>uid://3puey0jbvpyg<>uid://cakmvgnxl4i4n
+Trace.tscn::PackedScene::8673942532065521279::1710948623::0::1::::<><>::res://Scripts/LevelManager.gd<>uid://3puey0jbvpyg<>uid://bj1kylu561ona<>uid://cakmvgnxl4i4n
+::res://Scripts/::1706153204
+gobal.gd::GDScript::-1::1689368551::0::1::::<>Node<>::
+LevelManager2.gd::GDScript::-1::1706153204::0::1::::<>Node<>::
+LevelManager.gd::GDScript::-1::1694638107::0::1::::<>Node<>::
+MenuButtons.gd::GDScript::-1::1703256466::0::1::::<>TouchScreenButton<>::
+::res://Scripts/Game Scripts/::1706153734
+ComCards.gd::GDScript::-1::1706153734::0::1::::<>Node2D<>::
+Compare.gd::GDScript::-1::1689996342::0::1::::<>TouchScreenButton<>::
+Drag'n'Drop.gd::GDScript::-1::1689368687::0::1::::<>TouchScreenButton<>::
+FillDot.gd::GDScript::-1::1689298926::0::1::::<>Node2D<>::
+Q&A.gd::GDScript::-1::1706153373::0::1::::<>Control<>::
+TraceTracker.gd::GDScript::-1::1689697506::0::1::::<>Node2D<>::
+::res://Sounds/::1689299185
+::res://Sounds/SFX/::1689996297
+ButtonClickNoise.mp3::AudioStreamMP3::4794251586795423039::1689298135::1689299182::1::::<><>::
+CorrectNoise.wav::AudioStreamWAV::1997476070798364810::1685018863::1689299184::1::::<><>::
+SprayPaint.mp3::AudioStreamMP3::3072444737080796402::1689103913::1689299185::1::::<><>::
+Wrong.mp3::AudioStreamMP3::8893099868699916010::1689996297::1689996297::1::::<><>::
+::res://Sprites/::1689699588
 ::res://Sprites/BlueCards/::1683723082
 Blue0.png::CompressedTexture2D::8977085511577223245::1682999735::1683723024::1::::<><>::
 Blue1.png::CompressedTexture2D::1967027598541425553::1683723082::1683723082::1::::<><>::
@@ -50,6 +49,16 @@ Blue7.png::CompressedTexture2D::4668389919919886337::1683723029::1683723029::1::
 Blue8.png::CompressedTexture2D::8425913861786481297::1683723029::1683723030::1::::<><>::
 Blue9.png::CompressedTexture2D::8810914286178935594::1683723029::1683723029::1::::<><>::
 Blue10.png::CompressedTexture2D::6189442300933207495::1683723029::1683723029::1::::<><>::
+::res://Sprites/Extra/::1689699658
+Blue.tres::AtlasTexture::-1::1689699376::0::1::::<><>::uid://ceeptcbh34lxw
+blueCircle.png::CompressedTexture2D::8272379172121210811::1686864429::1689699376::1::::<><>::
+caterpillarSprites.png::CompressedTexture2D::5062799044878384152::1684845426::1689699376::1::::<><>::
+MathSigns.png::CompressedTexture2D::7507656365390677940::1689699581::1689699658::1::::<><>::
+Red.tres::AtlasTexture::-1::1689699376::0::1::::<><>::uid://ceeptcbh34lxw
+redCircle.png::CompressedTexture2D::8316508055876530526::1686864429::1689699376::1::::<><>::
+smileyCircle.png::CompressedTexture2D::3844731806096803773::1686864429::1689699376::1::::<><>::
+Yellow.tres::AtlasTexture::-1::1689699376::0::1::::<><>::uid://ceeptcbh34lxw
+yellowCircle.png::CompressedTexture2D::2370235603657777215::1686864429::1689699376::1::::<><>::
 ::res://Sprites/RedCards/::1684845426
 Red0.png::CompressedTexture2D::8878279710705957007::1684845426::1684845426::1::::<><>::
 Red1.png::CompressedTexture2D::2148122912378588520::1684845426::1684845426::1::::<><>::
